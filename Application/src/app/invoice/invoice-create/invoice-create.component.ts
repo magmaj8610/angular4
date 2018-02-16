@@ -2,6 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {Invoice} from "../Invoice";
 import {AbstractInvoiceComponent} from "../abstract-invoice/abstract-invoice.component";
 import {LOCAL_STORAGE, WebStorageService} from "angular-webstorage-service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-invoice-create',
@@ -11,7 +12,7 @@ export class InvoiceCreateComponent extends AbstractInvoiceComponent implements 
 
   public invoice:Invoice = new Invoice();
 
-  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService) {
+  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService,private router:Router) {
     super(storageChild);
   }
 
@@ -20,6 +21,7 @@ export class InvoiceCreateComponent extends AbstractInvoiceComponent implements 
 
   public save(){
     this.saveInvoiceInLocal(this.invoice);
+    this.router.navigate(['invoice']);
   }
 
 
