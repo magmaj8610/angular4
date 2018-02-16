@@ -1,32 +1,21 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 import {Invoice} from "../Invoice";
+import {AbstractInvoiceComponent} from "../abstract-invoice/abstract-invoice.component";
+import {LOCAL_STORAGE, WebStorageService} from "angular-webstorage-service";
 
 @Component({
   selector: 'app-invoice-list',
-  templateUrl: './invoice-list.component.html',
-  styleUrls: ['./invoice-list.component.css']
+  templateUrl: './invoice-list.component.html'
 })
-export class InvoiceListComponent implements OnInit {
+export class InvoiceListComponent extends AbstractInvoiceComponent implements OnInit {
 
-  public invoice:Array<Invoice>;
+  public invoices: Array<Invoice> = new Array<Invoice>();
 
-  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService) {
-
+  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService) {
+    super(storageChild);
+    this.invoices = this.getInvoicesFromLocal();
   }
 
   ngOnInit() {
-  }
-
-  saveInLocal(key, val): void {
-    console.log('recieved= key:' + key + 'value:' + val);
-    this.storage.set(key, val);
-    this.invoice[key]= this.storage.get(key);
-  }
-
-  getFromLocal(key): void {
-    console.log('recieved= key:' + key);
-    this.invoice[key]= this.storage.get(key);
-    console.log(this.invoice);
   }
 }

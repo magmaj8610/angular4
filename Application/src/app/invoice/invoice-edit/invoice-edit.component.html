@@ -1,3 +1,21 @@
-<p>
-  invoice-edit works!
-</p>
+EDIT
+<table class="table">
+  <thead>
+  <tr>
+    <th>Parametr</th>
+    <th>Wartość</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>ID</td>
+    <td><input type="number" [(ngModel)]="invoice.id"></td>
+  </tr>
+  <tr>
+    <td>Nazwa</td>
+    <td><input type="text" [(ngModel)]="invoice.name"></td>
+  </tr>
+  </tbody>
+
+  <button class="button" (click)="save()">Zapisz</button>
+</table>

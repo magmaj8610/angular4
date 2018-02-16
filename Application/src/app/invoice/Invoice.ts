@@ -1,4 +1,4 @@
 export class Invoice {
-  id: Number;
+  id: number;
   name: string;
 }
