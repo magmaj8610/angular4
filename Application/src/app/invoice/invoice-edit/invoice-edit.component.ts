@@ -12,7 +12,7 @@ export class InvoiceEditComponent extends AbstractInvoiceComponent implements On
 
   public invoice: Invoice = new Invoice();
 
-  constructor(private route: ActivatedRoute, @Inject(LOCAL_STORAGE) private storageChild: WebStorageService,private router:Router) {
+  constructor(private route: ActivatedRoute, @Inject(LOCAL_STORAGE) private storageChild: WebStorageService, private router: Router) {
     super(storageChild);
     this.route.params.subscribe(params => {
       if (params['id'] != null) {
@@ -24,7 +24,8 @@ export class InvoiceEditComponent extends AbstractInvoiceComponent implements On
   ngOnInit() {
 
   }
-  public save(){
+
+  public save() {
     this.saveInvoiceInLocal(this.invoice);
     this.router.navigate(['invoice']);
   }

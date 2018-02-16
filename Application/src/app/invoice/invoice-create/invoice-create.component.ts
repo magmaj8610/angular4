@@ -8,18 +8,18 @@ import {Router} from "@angular/router";
   selector: 'app-invoice-create',
   templateUrl: './invoice-create.component.html'
 })
-export class InvoiceCreateComponent extends AbstractInvoiceComponent implements OnInit{
+export class InvoiceCreateComponent extends AbstractInvoiceComponent implements OnInit {
 
-  public invoice:Invoice = new Invoice();
+  public invoice: Invoice = new Invoice();
 
-  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService,private router:Router) {
+  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService, private router: Router) {
     super(storageChild);
   }
 
   ngOnInit() {
   }
 
-  public save(){
+  public save() {
     this.saveInvoiceInLocal(this.invoice);
     this.router.navigate(['invoice']);
   }

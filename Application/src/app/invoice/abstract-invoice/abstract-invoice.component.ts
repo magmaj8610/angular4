@@ -17,7 +17,7 @@ export class AbstractInvoiceComponent implements OnInit {
   }
 
 
-  protected  getInvoiceFromLocal(key: number): Invoice {
+  protected getInvoiceFromLocal(key: number): Invoice {
     let invoices: Array<Invoice> = this.storage.get("invoices");
     let i = 0;
     for (let invoice of invoices) {
@@ -29,7 +29,7 @@ export class AbstractInvoiceComponent implements OnInit {
     return new Invoice();
   }
 
-  protected  getInvoicesFromLocal(): Array<Invoice> {
+  protected getInvoicesFromLocal(): Array<Invoice> {
     let invoices: Array<Invoice> = this.storage.get("invoices");
     if (invoices == null) {
       invoices = new Array<Invoice>();
@@ -37,7 +37,7 @@ export class AbstractInvoiceComponent implements OnInit {
     return invoices;
   }
 
-  protected  saveInvoiceInLocal(invoice: Invoice): void {
+  protected saveInvoiceInLocal(invoice: Invoice): void {
     let invoices: Array<Invoice> = this.storage.get("invoices");
     if (invoices == null) {
       invoices = new Array<Invoice>();

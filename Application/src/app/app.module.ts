@@ -29,4 +29,5 @@ import {AbstractInvoiceComponent} from "./invoice/abstract-invoice/abstract-invo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
