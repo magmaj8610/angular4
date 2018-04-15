@@ -10,6 +10,10 @@ import {InvoiceEditComponent} from './invoice/invoice-edit/invoice-edit.componen
 import {StorageServiceModule} from "angular-webstorage-service";
 import {FormsModule} from "@angular/forms";
 import {AbstractInvoiceComponent} from "./invoice/abstract-invoice/abstract-invoice.component";
+import {UserListComponent} from "./user/user-list/user-list.component";
+import {UserCreateComponent} from "./user/user-create/user-create.component";
+import {UserEditComponent} from "./user/user-edit/user-edit.component";
+import {AbstractUserComponent} from "./user/abstract-user/abstract-user.component";
 
 
 @NgModule({
@@ -18,7 +22,11 @@ import {AbstractInvoiceComponent} from "./invoice/abstract-invoice/abstract-invo
     InvoiceListComponent,
     InvoiceCreateComponent,
     InvoiceEditComponent,
-    AbstractInvoiceComponent
+    AbstractInvoiceComponent,
+    UserListComponent,
+    UserCreateComponent,
+    UserEditComponent,
+    AbstractUserComponent
   ],
   imports: [
     BrowserModule,
