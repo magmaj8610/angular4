@@ -6,10 +6,13 @@
   </tr>
   </thead>
   <tbody>
+
   <tr *ngFor="let temp of invoices; let i = index">
     <td><a href="invoice/edit/{{temp.id}}">{{temp.id}}</a></td>
     <td>{{temp.name}}</td>
   </tr>
+
+
   </tbody>
 
   <input type="button" value="Nowa" [routerLink]="['create']" class="btn">

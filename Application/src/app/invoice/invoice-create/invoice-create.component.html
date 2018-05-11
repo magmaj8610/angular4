@@ -3,17 +3,91 @@
   <tr>
     <th>Parametr</th>
     <th>Wartość</th>
+
+
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td>ID</td>
-    <td><input type="numer" [(ngModel)]="invoice.id"></td>
+    <td>Numer Faktury</td>
+    <td><input type="text" [(ngModel)]="invoice.id"></td>
   </tr>
   <tr>
-    <td>Nazwa</td>
+    <td>Dane sprzedawcy</td>
     <td><input type="nazwa" [(ngModel)]="invoice.name"></td>
   </tr>
+  <tr>
+    <td>Adres Sprzedawcy</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.adress"></td>
+  </tr>
+
+  <tr>
+    <td>NIP</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.nip"></td>
+  </tr>
+
+  <tr>
+    <td>Numer konta bankowego</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.countnumber"></td>
+  </tr>
+
+
+  <tr>
+    <td>Dane Odbiorcy</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.name"></td>
+  </tr>
+
+  <tr>
+    <td>Adres Odbiorcy</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.adress"></td>
+  </tr>
+  <tr>
+    <td>NIP</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.nip"></td>
+  </tr>
+
+
+  <tr>
+    <td>Towar/Usługa</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.commodity"></td>
+  </tr>
+
+  <tr>
+    <td>Ilość</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.quantity"></td>
+  </tr>
+
+  <tr>
+    <td>Cena</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.price"></td>
+  </tr>
+  <tr>
+    <td>Cena z VAT</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.price"></td>
+  </tr>
+
+  <tr>
+    <td>Typ płatności</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.payment"></td>
+  </tr>
+
+  <tr>
+    <td>Kwota do zapłaty</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.payment"></td>
+  </tr>
+
+  <tr>
+    <td>Data wystawienia </td>
+    <td><input type="nazwa" [(ngModel)]="invoice.date"></td>
+  </tr>
+
+  <tr>
+    <td>Data płatności</td>
+    <td><input type="nazwa" [(ngModel)]="invoice.date"></td>
+  </tr>
+
+
+
   </tbody>
 
   <button class="btn" (click)="save()">Zapisz</button>
