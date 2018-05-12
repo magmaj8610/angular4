@@ -29,7 +29,7 @@ export class TowarService {
     return Towary;
   }
 
-  public saveTowarInLocal(Towar: Towar): void {
+  public saveTowarInLocal(towar: Towar): void {
     let Towary: Array<Towar> = this.storage.get("Towary");
     if (Towary == null) {
       Towary = new Array<Towar>();
@@ -37,14 +37,14 @@ export class TowarService {
     let i = 0;
     let find = false;
     for (let TowarTemp of Towary) {
-      if (Towar.id == TowarTemp.id) {
-        Towary[i] = Towar;
+      if (towar.id == TowarTemp.id) {
+        Towary[i] = towar;
         find = true;
       }
       i++;
     }
     if (!find) {
-      Towary[i] = Towar;
+      Towary[i] = towar;
     }
     this.storage.set("Towary", Towary);
   }

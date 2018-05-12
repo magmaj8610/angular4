@@ -7,6 +7,7 @@ export class KlientService {
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService) {
 
   }
+
   public getKlientFromLocal(key: number): Klient {
     let Klienci: Array<Klient> = this.storage.get("Klienci");
     let i = 0;
@@ -27,7 +28,7 @@ export class KlientService {
     return Klienci;
   }
 
-  public saveKlientInLocal(Klient: Klient): void {
+  public saveKlientInLocal(klient: Klient): void {
     let Klienci: Array<Klient> = this.storage.get("Klienci");
     if (Klienci == null) {
       Klienci = new Array<Klient>();
@@ -35,16 +36,34 @@ export class KlientService {
     let i = 0;
     let find = false;
     for (let KlientTemp of Klienci) {
-      if (Klient.id == KlientTemp.id) {
-        Klienci[i] = Klient;
+      if (klient.id == KlientTemp.id) {
+        Klienci[i] = klient;
         find = true;
       }
       i++;
     }
     if (!find) {
-      Klienci[i] = Klient;
+      Klienci[i] = klient;
     }
     this.storage.set("Klienci", Klienci);
   }
 
+  public deleteKlientInLocal(klientid:number): void {
+    let Klienci: Array<Klient> = this.storage.get("Klienci");
+    if (Klienci == null) {
+      Klienci = new Array<Klient>();
+    }
+    let i = 0;
+    let index = -1;
+    for (let KlientTemp of Klienci) {
+      if (klientid == KlientTemp.id) {
+        index = i;
+      }
+      i++;
+    }
+    if (index > -1) {
+      Klienci.splice(index,1);
+    }
+    this.storage.set("Klienci", Klienci);
+  }
 }
