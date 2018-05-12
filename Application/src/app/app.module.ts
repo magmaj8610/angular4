@@ -14,6 +14,8 @@ import {UserListComponent} from "./user/user-list/user-list.component";
 import {UserCreateComponent} from "./user/user-create/user-create.component";
 import {UserEditComponent} from "./user/user-edit/user-edit.component";
 import {AbstractUserComponent} from "./user/abstract-user/abstract-user.component";
+import { MainMenuComponent } from './menu/main-menu/main-menu.component';
+import {UtilsService} from "./shared/UtilsService";
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import {AbstractUserComponent} from "./user/abstract-user/abstract-user.componen
     UserListComponent,
     UserCreateComponent,
     UserEditComponent,
-    AbstractUserComponent
+    AbstractUserComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,7 @@ import {AbstractUserComponent} from "./user/abstract-user/abstract-user.componen
     StorageServiceModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
