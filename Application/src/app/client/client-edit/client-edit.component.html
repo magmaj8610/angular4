@@ -1,25 +1,33 @@
 <table class="table">
   <thead>
   <tr>
-    <th>id</th>
-    <th>nazwa</th>
-    <th>ulica</th>
-    <th>miasto</th>
-    <th>kodPocztowy</th>
-    <th>nip</th>
+    <th>Pola do edytowania</th>
   </tr>
   </thead>
   <tbody>
   <tr>
+    <td>ID</td>
     <td><input type="number" [(ngModel)]="klient.id"></td>
+  </tr>
+  <tr>
+    <td>Nazwa Klienta</td>
     <td><input type="text" [(ngModel)]="klient.nazwa"></td>
+  </tr>
+  <tr>
+    <td>Ulica</td>
     <td><input type="text" [(ngModel)]="klient.ulica"></td>
+  </tr>
+  <tr>
+    <td>Miasto</td>
     <td><input type="text" [(ngModel)]="klient.miasto"></td>
+  </tr>
+  <tr>
+    <td>Kod Pocztowy</td>
     <td><input type="text" [(ngModel)]="klient.kodPocztowy"></td>
+  </tr>
+  <tr>
+    <td>NIP</td>
     <td><input type="number" [(ngModel)]="klient.nip"></td>
-
-
-
   </tr>
   </tbody>
 

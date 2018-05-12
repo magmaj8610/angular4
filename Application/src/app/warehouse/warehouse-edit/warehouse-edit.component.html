@@ -1,15 +1,18 @@
 <table class="table">
   <thead>
-  <tr>
-    <th>id</th>
-    <th>nazwa</th>
-    <th>cena</th>
-  </tr>
+  <th>Pola do edytowania</th>
   </thead>
   <tbody>
   <tr>
+    <td>ID</td>
     <td><input type="number" [(ngModel)]="towar.id"></td>
+  </tr>
+  <tr>
+    <td>Nazwa towaru</td>
     <td><input type="text" [(ngModel)]="towar.nazwa"></td>
+  </tr>
+  <tr>
+    <td>Cena</td>
     <td><input type="number" [(ngModel)]="towar.cena"></td>
   </tr>
   </tbody>
