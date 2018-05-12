@@ -48,4 +48,23 @@ export class UzytkownikService {
     this.storage.set("Uzytkownicy", Uzytkownicy);
   }
 
+  public deleteUzytkownikInLocal(uzytkownik: number): void {
+    let Uzytkownicy: Array<Uzytkownik> = this.storage.get("Uzytkownicy");
+    if (Uzytkownicy == null) {
+      Uzytkownicy = new Array<Uzytkownik>();
+    }
+    let i = 0;
+    let index = -1;
+    for (let UzytkownikTemp of Uzytkownicy) {
+      if (uzytkownik == UzytkownikTemp.id) {
+       index = i;
+      }
+      i++;
+    }
+    if (index > -1) {
+      Uzytkownicy.splice(index,1);
+    }
+    this.storage.set("Uzytkownicy", Uzytkownicy);
+  }
+
 }

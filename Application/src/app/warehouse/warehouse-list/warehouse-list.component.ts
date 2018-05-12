@@ -13,4 +13,9 @@ export class WarehouseListComponent   {
   constructor(private towarService: TowarService) {
     this.towary = towarService.getTowaryFromLocal();
   }
+
+  public delete(towarId:number){
+    this.towarService.deleteTowarInLocal(towarId);
+    this.towary = this.towarService.getTowaryFromLocal();
+  }
 }

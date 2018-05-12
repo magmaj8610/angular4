@@ -13,5 +13,9 @@ export class UserListComponent {
   constructor(private uzytkownikService: UzytkownikService) {
     this.uzytkownicy = uzytkownikService.getUzytkownicyFromLocal();
   }
+  public delete(uzytkownikId:number){
+    this.uzytkownikService.deleteUzytkownikInLocal(uzytkownikId);
+    this.uzytkownicy = this.uzytkownikService.getUzytkownicyFromLocal();
+  }
 
 }
