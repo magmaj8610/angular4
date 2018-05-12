@@ -13,5 +13,9 @@ export class InvoiceListComponent{
   constructor(private fakturaService: FakturaService,) {
     this.faktury = fakturaService.getFakturyFromLocal();
   }
+  public delete(fakturaId:number){
+    this.fakturaService.deleteFakturaInLocal(fakturaId);
+    this.faktury = this.fakturaService.getFakturyFromLocal();
+  }
 
 }

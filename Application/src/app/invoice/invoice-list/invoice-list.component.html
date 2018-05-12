@@ -14,7 +14,6 @@
   </tr>
   </thead>
   <tbody>
-
   <tr *ngFor="let temp of faktury; let i = index">
     <td><a href="lista_faktur/edycja/{{temp.id}}">{{temp.id}}--EDYCJA</a></td>
     <td>{{temp.dataWystawienia}}</td>
@@ -25,11 +24,7 @@
     <td>{{temp.nrFaktury}}</td>
     <td>{{temp.pozycje}}</td>
     <td>{{temp.uwagi}}</td>
+    <td (click)="delete(temp.id)">Usuń</td>
   </tr>
-
-
   </tbody>
-
-
-
 </table>

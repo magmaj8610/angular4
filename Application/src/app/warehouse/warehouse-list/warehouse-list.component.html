@@ -13,6 +13,7 @@
     <td><a href="lista_towarow/edycja/{{temp.id}}">{{temp.id}}--EDYCJA</a></td>
     <td>{{temp.nazwa}}</td>
     <td>{{temp.cena}}</td>
+    <td (click)="delete(temp.id)">Usuń</td>
   </tr>
   </tbody>
 </table>

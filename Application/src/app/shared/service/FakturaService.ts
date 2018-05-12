@@ -48,4 +48,22 @@ export class FakturaService {
     }
     this.storage.set("Faktury", Faktury);
   }
+  public deleteFakturaInLocal(faktura: number): void {
+    let Faktury: Array<Faktura> = this.storage.get("Faktury");
+    if (Faktury == null) {
+      Faktury = new Array<Faktura>();
+    }
+    let i = 0;
+    let index = -1;
+    for (let FakturaTemp of Faktury) {
+      if (faktura == FakturaTemp.id) {
+        index = i;
+      }
+      i++;
+    }
+    if (index > -1) {
+      Faktury.splice(index,1);
+    }
+    this.storage.set("Faktury", Faktury);
+  }
 }

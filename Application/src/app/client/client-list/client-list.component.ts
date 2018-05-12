@@ -17,8 +17,6 @@ export class ClientListComponent{
 
   public delete(clientId:number){
     this.klientService.deleteKlientInLocal(clientId);
-    this.router.navigate(['/lista_klientow']);
     this.klienci = this.klientService.getKlienciFromLocal();
   }
-
 }
