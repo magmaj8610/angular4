@@ -9,20 +9,25 @@
     <th>nip</th>
     <th>login</th>
     <th>haslo</th>
-    <th>logo</th>
+    <th>logoId</th>
     <th>numerKonta</th>
     <th>bank</th>
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td><input type="numer" [(ngModel)]="uzytkownik.id"></td>
+    <td><input type="number" [(ngModel)]="uzytkownik.id"></td>
     <td><input type="text"    [(ngModel)]="uzytkownik.nazwa"></td>
-    <td><input type=""    [(ngModel)]="uzytkownik."></td>
-    <td><input type=""    [(ngModel)]="uzytkownik."></td>
-    <td><input type=""    [(ngModel)]="uzytkownik."></td>
-    <td><input type=""    [(ngModel)]="uzytkownik."></td>
-    <td><input type=""    [(ngModel)]="uzytkownik."></td>
+    <td><input type="text"    [(ngModel)]="uzytkownik.ulica"></td>
+    <td><input type="text"    [(ngModel)]="uzytkownik.miasto"></td>
+    <td><input type="text"    [(ngModel)]="uzytkownik.kodPocztowy"></td>
+    <td><input type="number"    [(ngModel)]="uzytkownik.nip"></td>
+    <td><input type="text"    [(ngModel)]="uzytkownik.login"></td>
+    <td><input type="text"    [(ngModel)]="uzytkownik.haslo"></td>
+    <td><input type="number"    [(ngModel)]="uzytkownik.logoId"></td>
+    <td><input type="number"    [(ngModel)]="uzytkownik.numerKonta"></td>
+    <td><input type="text"    [(ngModel)]="uzytkownik.bank"></td>
+
   </tr>
   </tbody>
 
