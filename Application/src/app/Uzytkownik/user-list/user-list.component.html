@@ -1,0 +1,15 @@
+<input type="button" value="Nowy użytkownik" [routerLink]="['create']" class="btn"><br>
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Nazwa</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let temp of users; let i = index">
+    <td><a href="user/edit/{{temp.id}}">{{temp.id}}</a></td>
+    <td>{{temp.name}}</td>
+  </tr>
+  </tbody>
+</table>

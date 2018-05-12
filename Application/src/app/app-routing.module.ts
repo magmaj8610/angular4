@@ -6,6 +6,9 @@ import {InvoiceEditComponent} from "./invoice/invoice-edit/invoice-edit.componen
 import {UserListComponent} from "./user/user-list/user-list.component";
 import {UserCreateComponent} from "./user/user-create/user-create.component";
 import {UserEditComponent} from "./user/user-edit/user-edit.component";
+import {ClientListComponent} from "./client/client-list/client-list.component";
+import {ClientCreateComponent} from "./client/client-create/client-create.component";
+import {ClientEditComponent} from "./client/client-edit/client-edit.component";
 
 const routes: Routes = [
   {path: 'lista_faktur', component: InvoiceListComponent},
@@ -13,7 +16,10 @@ const routes: Routes = [
   {path: 'lista_faktur/edycja/:id', component: InvoiceEditComponent},
   {path: 'lista_uzytkownikow', component: UserListComponent},
   {path: 'lista_uzytkownikow/stworz', component: UserCreateComponent},
-  {path: 'lista_uzytkownikow/edycja/:id', component: UserEditComponent}
+  {path: 'lista_uzytkownikow/edycja/:id', component: UserEditComponent},
+  {path: 'lista_klientow', component: ClientListComponent},
+  {path: 'lista_klientow/stworz', component: ClientCreateComponent},
+  {path: 'lista_klientow/edycja/:id', component: ClientEditComponent}
 ];
 
 @NgModule({

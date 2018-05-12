@@ -18,6 +18,10 @@ import {FakturaService} from "./shared/service/FakturaService";
 import {UzytkownikService} from "./shared/service/UzytkownikService";
 import {KlientService} from "./shared/service/KlientService";
 import {TowarService} from "./shared/service/TowarService";
+import {ClientEditComponent} from "./client/client-edit/client-edit.component";
+import {ClientListComponent} from "./client/client-list/client-list.component";
+import {ClientCreateComponent} from "./client/client-create/client-create.component";
+
 
 
 @NgModule({
@@ -29,7 +33,10 @@ import {TowarService} from "./shared/service/TowarService";
     UserListComponent,
     UserCreateComponent,
     UserEditComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    ClientEditComponent,
+    ClientListComponent,
+    ClientCreateComponent
   ],
   imports: [
     BrowserModule,
