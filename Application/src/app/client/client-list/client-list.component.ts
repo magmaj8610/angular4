@@ -7,10 +7,7 @@ import {Router} from "@angular/router";
   selector: 'app-client-list',
   templateUrl: './client-list.component.html'
 })
-export class ClientListComponent implements OnInit ,OnChanges{
-  ngOnChanges(changes: SimpleChanges): void {
-    this.klienci = this.klientService.getKlienciFromLocal();
-  }
+export class ClientListComponent{
 
   public klienci: Array<Klient> = new Array<Klient>();
 
@@ -20,10 +17,7 @@ export class ClientListComponent implements OnInit ,OnChanges{
 
   public delete(clientId:number){
     this.klientService.deleteKlientInLocal(clientId);
-    this.router.navigate(['lista_klientow']);
-  }
-
-  ngOnInit(): void {
+    this.router.navigate(['/lista_klientow']);
     this.klienci = this.klientService.getKlienciFromLocal();
   }
 
