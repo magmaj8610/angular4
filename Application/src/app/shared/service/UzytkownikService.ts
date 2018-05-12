@@ -28,7 +28,7 @@ export class UzytkownikService {
     return Uzytkownicy;
   }
 
-  public saveUzytkownikInLocal(Uzytkownik: Uzytkownik): void {
+  public saveUzytkownikInLocal(uzytkownik: Uzytkownik): void {
     let Uzytkownicy: Array<Uzytkownik> = this.storage.get("Uzytkownicy");
     if (Uzytkownicy == null) {
       Uzytkownicy = new Array<Uzytkownik>();
@@ -36,14 +36,14 @@ export class UzytkownikService {
     let i = 0;
     let find = false;
     for (let UzytkownikTemp of Uzytkownicy) {
-      if (Uzytkownik.id == UzytkownikTemp.id) {
-        Uzytkownicy[i] = Uzytkownik;
+      if (uzytkownik.id == UzytkownikTemp.id) {
+        Uzytkownicy[i] = uzytkownik;
         find = true;
       }
       i++;
     }
     if (!find) {
-      Uzytkownicy[i] = Uzytkownik;
+      Uzytkownicy[i] = uzytkownik;
     }
     this.storage.set("Uzytkownicy", Uzytkownicy);
   }

@@ -29,7 +29,7 @@ export class FakturaService {
     return Faktury;
   }
 
-  public saveFakturaInLocal(Faktura: Faktura): void {
+  public saveFakturaInLocal(faktura: Faktura): void {
     let Faktury: Array<Faktura> = this.storage.get("Faktury");
     if (Faktury == null) {
       Faktury = new Array<Faktura>();
@@ -37,14 +37,14 @@ export class FakturaService {
     let i = 0;
     let find = false;
     for (let FakturaTemp of Faktury) {
-      if (Faktura.id == FakturaTemp.id) {
-        Faktury[i] = Faktura;
+      if (faktura.id == FakturaTemp.id) {
+        Faktury[i] = faktura;
         find = true;
       }
       i++;
     }
     if (!find) {
-      Faktury[i] = Faktura;
+      Faktury[i] = faktura;
     }
     this.storage.set("Faktury", Faktury);
   }
