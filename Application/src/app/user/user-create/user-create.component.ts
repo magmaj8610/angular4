@@ -1,28 +1,22 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {User} from "../User";
-import {AbstractUserComponent} from "../abstract-user/abstract-user.component";
-import {LOCAL_STORAGE, WebStorageService} from "angular-webstorage-service";
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
+import {UzytkownikService} from "../../shared/service/UzytkownikService";
+import {Uzytkownik} from "../../shared/model/Uzytkownik";
 
 @Component({
   selector: 'app-user-create',
   templateUrl: './user-create.component.html'
 })
-export class UserCreateComponent extends AbstractUserComponent implements OnInit {
+export class UserCreateComponent {
 
-  public user: User = new User();
+  public uzytkownik: Uzytkownik = new Uzytkownik();
 
-  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService, private router: Router) {
-    super(storageChild);
-  }
-
-  ngOnInit() {
+  constructor(private uzytkownikService: UzytkownikService, private router: Router) {
   }
 
   public save() {
-    this.saveUserInLocal(this.user);
-    this.router.navigate(['user']);
+    this.uzytkownikService.saveUzytkownikInLocal(this.uzytkownik);
+    this.router.navigate(['lista_uzytkownikow']);
   }
-
 
 }

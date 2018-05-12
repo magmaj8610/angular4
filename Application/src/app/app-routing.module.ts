@@ -8,12 +8,12 @@ import {UserCreateComponent} from "./user/user-create/user-create.component";
 import {UserEditComponent} from "./user/user-edit/user-edit.component";
 
 const routes: Routes = [
-  {path: 'invoice_list', component: InvoiceListComponent},
-  {path: 'invoice_list/create', component: InvoiceCreateComponent},
-  {path: 'invoice_list/edit/:id', component: InvoiceEditComponent},
-  {path: 'user_list', component: UserListComponent},
-  {path: 'user_list/create', component: UserCreateComponent},
-  {path: 'user_list/edit/:id', component: UserEditComponent}
+  {path: 'lista_faktur', component: InvoiceListComponent},
+  {path: 'lista_faktur/stworz', component: InvoiceCreateComponent},
+  {path: 'lista_faktur/edycja/:id', component: InvoiceEditComponent},
+  {path: 'lista_uzytkownikow', component: UserListComponent},
+  {path: 'lista_uzytkownikow/stworz', component: UserCreateComponent},
+  {path: 'lista_uzytkownikow/edycja/:id', component: UserEditComponent}
 ];
 
 @NgModule({

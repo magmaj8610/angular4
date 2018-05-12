@@ -1,21 +1,17 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {User} from "../User";
-import {AbstractUserComponent} from "../abstract-user/abstract-user.component";
-import {LOCAL_STORAGE, WebStorageService} from "angular-webstorage-service";
+import {Component} from '@angular/core';
+import {UzytkownikService} from "../../shared/service/UzytkownikService";
+import {Uzytkownik} from "../../shared/model/Uzytkownik";
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html'
 })
-export class UserListComponent extends AbstractUserComponent implements OnInit {
+export class UserListComponent {
 
-  public users: Array<User> = new Array<User>();
+  public uzytkownicy: Array<Uzytkownik> = new Array<Uzytkownik>();
 
-  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService) {
-    super(storageChild);
-    this.users = this.getUsersFromLocal();
+  constructor(private uzytkownikService: UzytkownikService) {
+    this.uzytkownicy = uzytkownikService.getUzytkownicyFromLocal();
   }
 
-  ngOnInit() {
-  }
 }

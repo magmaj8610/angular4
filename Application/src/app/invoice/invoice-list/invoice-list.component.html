@@ -7,14 +7,13 @@
   </thead>
   <tbody>
 
-  <tr *ngFor="let temp of invoices; let i = index">
-    <td><a href="invoice/edit/{{temp.id}}">{{temp.id}}</a></td>
-    <td>{{temp.name}}</td>
+  <tr *ngFor="let temp of faktury; let i = index">
+    <td><a href="faktura/edycja/{{temp.id}}">{{temp.id}}</a></td>
   </tr>
 
 
   </tbody>
 
-  <input type="button" value="Nowa" [routerLink]="['create']" class="btn">
+  <input type="button" value="Nowa" [routerLink]="['stworz']" class="btn">
 
 </table>

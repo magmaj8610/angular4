@@ -1,27 +1,22 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import {Invoice} from "../Invoice";
-import {AbstractInvoiceComponent} from "../abstract-invoice/abstract-invoice.component";
-import {LOCAL_STORAGE, WebStorageService} from "angular-webstorage-service";
+import {Component} from '@angular/core';
 import {Router} from "@angular/router";
+import {FakturaService} from "../../shared/service/FakturaService";
+import {Faktura} from "../../shared/model/Faktura";
 
 @Component({
   selector: 'app-invoice-create',
   templateUrl: './invoice-create.component.html'
 })
-export class InvoiceCreateComponent extends AbstractInvoiceComponent implements OnInit {
+export class InvoiceCreateComponent {
 
-  public invoice: Invoice = new Invoice();
+  public faktura: Faktura = new Faktura();
 
-  constructor(@Inject(LOCAL_STORAGE) private storageChild: WebStorageService, private router: Router) {
-    super(storageChild);
-  }
-
-  ngOnInit() {
+  constructor(private fakturaService: FakturaService, private router: Router) {
   }
 
   public save() {
-    this.saveInvoiceInLocal(this.invoice);
-    this.router.navigate(['invoice']);
+    this.fakturaService.saveFakturaInLocal(this.faktura);
+    this.router.navigate(['faktura']);
   }
 
 
