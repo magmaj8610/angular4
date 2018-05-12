@@ -3,14 +3,16 @@
   <thead>
   <tr>
     <th>id</th>
+    <th>nazwa</th>
+    <th>cena</th>
     <th></th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let temp of towary; let i = index">
     <td><a href="lista_uzytkownikow/edycja/{{temp.id}}">{{temp.id}}</a></td>
-    <td>{{temp.}}</td>
-
+    <td>{{temp.nazwa}}</td>
+    <td>{{temp.cena}}</td>
   </tr>
   </tbody>
 </table>

@@ -2,12 +2,21 @@
   <thead>
   <tr>
     <th>id</th>
+    <th>nazwa</th>
+    <th>ulica</th>
+    <th>miasto</th>
+    <th>kodPocztowy</th>
+    <th>nip</th>
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td><input type="numer" [(ngModel)]="klient.id"></td>
-
+    <td><input type="number" [(ngModel)]="klient.id"></td>
+    <td><input type="text" [(ngModel)]="klient.nazwa"></td>
+    <td><input type="text" [(ngModel)]="klient.ulica"></td>
+    <td><input type="text" [(ngModel)]="klient.miasto"></td>
+    <td><input type="text" [(ngModel)]="klient.kodPocztowy"></td>
+    <td><input type="number" [(ngModel)]="klient.nip"></td>
   </tr>
   </tbody>
 
