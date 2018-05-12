@@ -11,11 +11,11 @@
     <th>pozycje</th>
     <th>uwagi</th>
   </tr>
-  </thead>e
+  </thead>
   <tbody>
 
   <tr *ngFor="let temp of faktury; let i = index">
-    <td><a href="faktura/edycja/{{temp.id}}">{{temp.id}}</a></td>
+    <td><a href="lista_faktur/edycja/{{temp.id}}">{{temp.id}}--EDYCJA</a></td>
     <td>{{temp.dataWystawienia}}</td>
     <td>{{temp.dataPlatnosci}}</td>
     <td>{{temp.formaPlatnosci}}</td>

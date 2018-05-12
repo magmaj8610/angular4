@@ -24,7 +24,7 @@ export class InvoiceEditComponent {
 
   public save() {
     this.fakturaService.saveFakturaInLocal(this.faktura);
-    this.router.navigate(['invoice']);
+    this.router.navigate(['lista_faktur']);
   }
 
   public download() {

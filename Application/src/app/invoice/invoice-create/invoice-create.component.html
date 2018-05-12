@@ -1,25 +1,38 @@
 <table class="table">
   <thead>
-  <tr>
-    <th>ID</th>
-    <th>dataWystawienia</th>
-    <th>dataPlatnosci</th>
-    <th>formaPlatnosci</th>
-    <th>sprzedawca</th>
-    <th>klient</th>
-    <th>nrFaktury</th>
-    <th>pozycje</th>
-    <th>uwagi</th>
-  </tr>
+  <th>Pola do wypełnienia</th>
   </thead>
   <tbody>
   <tr>
-    <td><input type="number" [(ngModel)]="faktura.id"></td>
+    <td>ID</td>
+    <td><input type="number" [(ngModel)]="faktura.id" required></td>
+  </tr>
+  <tr>
+    <td>Data Wystawienia</td>
     <td><input type="date" [(ngModel)]="faktura.dataWystawienia"></td>
+  </tr>
+  <tr>
+    <td>Data Płatności</td>
     <td><input type="date" [(ngModel)]="faktura.dataPlatnosci"></td>
+  </tr>
+  <tr>
+    <td>Forma Płatności</td>
     <td><input type="text" [(ngModel)]="faktura.formaPlatnosci"></td>
+  </tr>
+  <tr>
+    <td>Sprzedawca</td>
     <td><input type="text" [(ngModel)]="faktura.sprzedawca"></td>
+  </tr>
+  <tr>
+    <td>Klient</td>
+    <td><input type="text" [(ngModel)]="faktura.klient"></td>
+  </tr>
+  <tr>
+    <td>Numer Faktury</td>
     <td><input type="number" [(ngModel)]="faktura.nrFaktury"></td>
+  </tr>
+  <tr>
+    <td>Uwagi</td>
     <td><input type="text" [(ngModel)]="faktura.uwagi"></td>
   </tr>
 

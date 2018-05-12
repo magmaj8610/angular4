@@ -1,33 +1,51 @@
 <table class="table">
   <thead>
-  <tr>
-    <th>id</th>
-    <th>nazwa</th>
-    <th>ulica</th>
-    <th>miasto</th>
-    <th>kodPocztowy</th>
-    <th>nip</th>
-    <th>login</th>
-    <th>haslo</th>
-    <th>logoId</th>
-    <th>numerKonta</th>
-    <th>bank</th>
-  </tr>
+  <th>Pola do edycji</th>
   </thead>
   <tbody>
   <tr>
+    <td>ID</td>
     <td><input type="number" [(ngModel)]="uzytkownik.id"></td>
+  </tr>
+  <tr>
+    <td>Nazwa</td>
     <td><input type="text" [(ngModel)]="uzytkownik.nazwa"></td>
+  </tr>
+  <tr>
+    <td>Ulica</td>
     <td><input type="text" [(ngModel)]="uzytkownik.ulica"></td>
+  </tr>
+  <tr>
+    <td>Miasto</td>
     <td><input type="text" [(ngModel)]="uzytkownik.miasto"></td>
+  </tr>
+  <tr>
+    <td>Kod pocztowy</td>
     <td><input type="text" [(ngModel)]="uzytkownik.kodPocztowy"></td>
+  </tr>
+  <tr>
+    <td>NIP</td>
     <td><input type="number" [(ngModel)]="uzytkownik.nip"></td>
+  </tr>
+  <tr>
+    <td>Login</td>
     <td><input type="text" [(ngModel)]="uzytkownik.login"></td>
+  </tr>
+  <tr>
+    <td>Hasło</td>
     <td><input type="text" [(ngModel)]="uzytkownik.haslo"></td>
+  </tr>
+  <tr>
+    <td>Logo ID</td>
     <td><input type="number" [(ngModel)]="uzytkownik.logoId"></td>
+  </tr>
+  <tr>
+    <td>Numer Konta</td>
     <td><input type="number" [(ngModel)]="uzytkownik.mumerKonta"></td>
+  </tr>
+  <tr>
+    <td>Bank</td>
     <td><input type="text" [(ngModel)]="uzytkownik.bank"></td>
-
   </tr>
   </tbody>
 

@@ -22,6 +22,6 @@ export class UserEditComponent  {
 
   public save() {
     this.uzytkownikService.saveUzytkownikInLocal(this.uzytkownik);
-    this.router.navigate(['uzytkownik']);
+    this.router.navigate(['lista_uzytkownikow']);
   }
 }

@@ -1,4 +1,4 @@
-<input type="button" value="Nowy użytkownik" [routerLink]="['stworz']" class="btn"><br>
+<input type="button" value="Nowy klient" [routerLink]="['stworz']" class="btn"><br>
 <table class="table">
   <thead>
   <tr>
@@ -13,7 +13,7 @@
   </thead>
   <tbody>
   <tr *ngFor="let temp of klienci; let i = index">
-    <td><a href="lista_uzytkownikow/edycja/{{temp.id}}">{{temp.id}}</a></td>
+    <td><a href="lista_klientow/edycja/{{temp.id}}">{{temp.id}}--EDYCJA</a></td>
     <td>{{temp.nazwa}}</td>
     <td>{{temp.ulica}}</td>
     <td>{{temp.miasto}}</td>

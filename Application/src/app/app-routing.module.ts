@@ -9,17 +9,26 @@ import {UserEditComponent} from "./user/user-edit/user-edit.component";
 import {ClientListComponent} from "./client/client-list/client-list.component";
 import {ClientCreateComponent} from "./client/client-create/client-create.component";
 import {ClientEditComponent} from "./client/client-edit/client-edit.component";
+import {WarehouseCreateComponent} from "./warehouse/warehouse-create/warehouse-create.component";
+import {WarehouseListComponent} from "./warehouse/warehouse-list/warehouse-list.component";
+import {WarehouseEditComponent} from "./warehouse/warehouse-edit/warehouse-edit.component";
 
 const routes: Routes = [
   {path: 'lista_faktur', component: InvoiceListComponent},
   {path: 'lista_faktur/stworz', component: InvoiceCreateComponent},
   {path: 'lista_faktur/edycja/:id', component: InvoiceEditComponent},
+
   {path: 'lista_uzytkownikow', component: UserListComponent},
   {path: 'lista_uzytkownikow/stworz', component: UserCreateComponent},
   {path: 'lista_uzytkownikow/edycja/:id', component: UserEditComponent},
+
   {path: 'lista_klientow', component: ClientListComponent},
   {path: 'lista_klientow/stworz', component: ClientCreateComponent},
-  {path: 'lista_klientow/edycja/:id', component: ClientEditComponent}
+  {path: 'lista_klientow/edycja/:id', component: ClientEditComponent},
+
+  {path: 'lista_towarow', component: WarehouseListComponent},
+  {path: 'lista_towarow/stworz', component: WarehouseCreateComponent},
+  {path: 'lista_towarow/edycja/:id', component: WarehouseEditComponent},
 ];
 
 @NgModule({

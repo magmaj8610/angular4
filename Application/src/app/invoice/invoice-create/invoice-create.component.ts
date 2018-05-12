@@ -16,8 +16,7 @@ export class InvoiceCreateComponent {
 
   public save() {
     this.fakturaService.saveFakturaInLocal(this.faktura);
-    this.router.navigate(['faktura']);
+    this.router.navigate(['lista_faktur']);
   }
-
 
 }
