@@ -19,6 +19,15 @@
   <tr *ngFor="let temp of uzytkownicy; let i = index">
     <td><a href="lista_uzytkownikow/edycja/{{temp.id}}">{{temp.id}}</a></td>
     <td>{{temp.nazwa}}</td>
+    <td>{{temp.ulica}}</td>
+    <td>{{temp.miasto}}</td>
+    <td>{{temp.kodPocztowy}}</td>
+    <td>{{temp.nip}}</td>
+    <td>{{temp.login}}</td>
+    <td>{{temp.haslo}}</td>
+    <td>{{temp.logo}}</td>
+    <td>{{temp.numerKonta}}</td>
+    <td>{{temp.bank}}</td>
   </tr>
   </tbody>
 </table>
