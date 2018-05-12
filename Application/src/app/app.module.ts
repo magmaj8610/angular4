@@ -21,6 +21,9 @@ import {TowarService} from "./shared/service/TowarService";
 import {ClientEditComponent} from "./client/client-edit/client-edit.component";
 import {ClientListComponent} from "./client/client-list/client-list.component";
 import {ClientCreateComponent} from "./client/client-create/client-create.component";
+import { WarehouseEditComponent } from './warehouse/warehouse-edit/warehouse-edit.component';
+import { WarehouseCreateComponent } from './warehouse/warehouse-create/warehouse-create.component';
+import { WarehouseListComponent } from './warehouse/warehouse-list/warehouse-list.component';
 
 
 
@@ -36,7 +39,10 @@ import {ClientCreateComponent} from "./client/client-create/client-create.compon
     MainMenuComponent,
     ClientEditComponent,
     ClientListComponent,
-    ClientCreateComponent
+    ClientCreateComponent,
+    WarehouseEditComponent,
+    WarehouseCreateComponent,
+    WarehouseListComponent
   ],
   imports: [
     BrowserModule,
