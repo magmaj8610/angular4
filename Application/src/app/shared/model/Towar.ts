@@ -1,5 +1,5 @@
 export class Towar {
-  id:string;
+  id:number;
   nazwa:string;
   cena:number;
 }
