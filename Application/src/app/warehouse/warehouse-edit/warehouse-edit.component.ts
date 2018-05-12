@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Towar} from "../../shared/model/Towar";
 import {TowarService} from "../../shared/service/TowarService";
 
@@ -11,7 +11,13 @@ export class WarehouseEditComponent implements OnInit {
 
   public towar:Towar = new Towar();
 
-  constructor(private towarService:TowarService, private router: Router) { }
+  constructor(private towarService:TowarService, private router: Router, private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      if (params['id'] != null) {
+        this.towar = towarService.getTowarFromLocal(params['id']);
+      }
+    });
+  }
 
   ngOnInit() {
   }

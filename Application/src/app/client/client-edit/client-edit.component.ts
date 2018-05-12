@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Klient} from "../../shared/model/Klient";
 import {KlientService} from "../../shared/service/KlientService";
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-client-edit',
@@ -11,7 +11,15 @@ export class ClientEditComponent implements OnInit {
 
   public klient:Klient = new Klient();
 
-  constructor(private klientService:KlientService,private router:Router) { }
+  constructor(private klientService:KlientService,private router:Router,private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      if (params['id'] != null) {
+        this.klient = klientService.getKlientFromLocal(params['id']);
+      }
+    });
+  }
+
+
 
   ngOnInit() {
   }
