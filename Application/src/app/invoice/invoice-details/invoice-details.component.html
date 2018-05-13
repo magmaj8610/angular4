@@ -72,7 +72,7 @@ Pozycje
   <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
     <td>{{pozycja.id}}</td>
-    <td>{{pozycja.nazwa}}</td>
+    <td>{{pozycja.nazwa.nazwa}}</td>
     <td>{{pozycja.jednostkaMiary}}</td>
     <td>{{pozycja.ilosc}}</td>
     <td>{{pozycja.ceneNetto}}</td>
