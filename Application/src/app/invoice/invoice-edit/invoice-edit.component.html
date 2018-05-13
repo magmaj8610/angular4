@@ -55,8 +55,8 @@
   <th>Nazwa</th>
   <th>Cena jednostkowa</th>
   <th>Ilość</th>
-  <th>Cena netto</th>
   <th>Wartość Vat</th>
+  <th>Cena netto</th>
   <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
     <td><input type="number" [(ngModel)]="pozycja.id" readonly class="form-control"></td>
@@ -65,12 +65,17 @@
         {{ towar.nazwa }}
       </option>
     </select>
-    <td><input type="number" (change)="count(pozycja)" [(ngModel)]="pozycja.jednostkaMiary" class="form-control"
-               min="0"></td>
+    <td><input type="number" (change)="count(pozycja)" [(ngModel)]="pozycja.jednostkaMiary" class="form-control" min="0"></td>
+
+
     <td><input type="number" (change)="count(pozycja)" [(ngModel)]="pozycja.ilosc" class="form-control"></td>
     <td><input type="number" (change)="count(pozycja)" [(ngModel)]="pozycja.wartoscVat" class="form-control"></td>
+
+
     <td><input type="number" [(ngModel)]="pozycja.ceneNetto" class="form-control" readonly></td>
     <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto" class="form-control" readonly></td>
+
+
     <td (click)="removePozycja(pozycja.id)">Usuń</td>
 
   </tr>
