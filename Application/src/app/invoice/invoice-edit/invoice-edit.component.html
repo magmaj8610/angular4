@@ -1,23 +1,32 @@
-<table class="table" id="details">
+<table  class="table table-striped table-bordered table-hover table-condensed table-responsive" id="details">
   <thead>
   <th>Pola do edytowania</th>
   </thead>
   <tbody>
   <tr>
     <td>ID</td>
-    <td><input type="number" [(ngModel)]="faktura.id"></td>
+    <td><input type="number" [(ngModel)]="faktura.id" class="form-control"></td>
   </tr>
   <tr>
     <td>Data Wystawienia</td>
-    <td><input type="date" [(ngModel)]="faktura.dataWystawienia"></td>
+    <td><input type="date" [(ngModel)]="faktura.dataWystawienia" class="form-control"></td>
   </tr>
   <tr>
     <td>Data Płatności</td>
-    <td><input type="date" [(ngModel)]="faktura.dataPlatnosci"></td>
+    <td><input type="date" [(ngModel)]="faktura.dataPlatnosci" class="form-control"></td>
   </tr>
   <tr>
     <td>Forma Płatności</td>
-    <td><input type="text" [(ngModel)]="faktura.formaPlatnosci"></td>
+    <td><input type="text" [(ngModel)]="faktura.formaPlatnosci" class="form-control"></td>
+  </tr>
+
+  <tr>
+    <td>Numer Faktury</td>
+    <td><input type="number" [(ngModel)]="faktura.nrFaktury" class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Uwagi</td>
+    <td><input type="text" [(ngModel)]="faktura.uwagi" class="form-control"></td>
   </tr>
   <tr>
     <td>Sprzedawca</td>
@@ -35,14 +44,6 @@
       </option>
     </select>
   </tr>
-  <tr>
-    <td>Numer Faktury</td>
-    <td><input type="number" [(ngModel)]="faktura.nrFaktury"></td>
-  </tr>
-  <tr>
-    <td>Uwagi</td>
-    <td><input type="text" [(ngModel)]="faktura.uwagi"></td>
-  </tr>
 
   </tbody>
 
@@ -58,17 +59,17 @@
   <th>Wartość Vat</th>
   <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
-    <td><input type="number" [(ngModel)]="pozycja.id" readonly></td>
-    <select name="pozycja.nazwa" ngModel>
+    <td><input type="number" [(ngModel)]="pozycja.id" readonly class="form-control"></td>
+    <select name="pozycja.nazwa" ngModel class="form-control">
       <option *ngFor="let towar of towarService.getTowaryFromLocal()" [ngValue]="towar">
         {{ towar.nazwa }}
       </option>
     </select>
-    <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary"></td>
-    <td><input type="number" [(ngModel)]="pozycja.ilosc"></td>
-    <td><input type="number" [(ngModel)]="pozycja.ceneNetto"></td>
-    <td><input type="number" [(ngModel)]="pozycja.wartoscVat"></td>
-    <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto"></td>
+    <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary" class="form-control"></td>
+    <td><input type="number" [(ngModel)]="pozycja.ilosc" class="form-control"></td>
+    <td><input type="number" [(ngModel)]="pozycja.ceneNetto" class="form-control"></td>
+    <td><input type="number" [(ngModel)]="pozycja.wartoscVat" class="form-control"></td>
+    <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto" class="form-control"></td>
     <td (click)="removePozycja(pozycja.id)">Usuń</td>
   </tr>
 </table>

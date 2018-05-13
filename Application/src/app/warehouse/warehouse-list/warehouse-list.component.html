@@ -1,6 +1,11 @@
-<span class="title">Lista towarów</span>
-<br>
-<input type="button" value="Nowy towar" [routerLink]="['stworz']" class="btn"><br>
+<table class="table">
+  <thead>
+  <tr><td (click)="newTowar()" >Nowy towar</td></tr>
+  </thead>
+</table>
+
+
+
 <table class="table">
   <thead>
   <tr>
