@@ -4,6 +4,7 @@ import {FakturaService} from "../../shared/service/FakturaService";
 import {Faktura} from "../../shared/model/Faktura";
 import {UzytkownikService} from "../../shared/service/UzytkownikService";
 import {KlientService} from "../../shared/service/KlientService";
+import {Pozycja} from "../../shared/model/Pozycja";
 
 @Component({
   selector: 'app-invoice-create',
@@ -24,4 +25,21 @@ export class InvoiceCreateComponent {
     this.router.navigate(['lista_faktur']);
   }
 
+  removePozycja(id: any) {
+    for(let pozycja of this.faktura.pozycje){
+      if(pozycja.id = id){
+        this.faktura.pozycje.splice(pozycja.id,1);
+      }
+    }
+  }
+
+  addPozycja() {
+    let pozycja:Pozycja = new Pozycja();
+    if(this.faktura.pozycje != null){
+      pozycja.id = this.faktura.pozycje.length;
+    }else{
+      pozycja.id = 0;
+    }
+    this.faktura.pozycje.push(pozycja);
+  }
 }
