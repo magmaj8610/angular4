@@ -1,4 +1,4 @@
-<table class="table" id="details" style="background-color: white">
+<table class="table" id="details">
   <thead>
   <th>Pola do edytowania</th>
   </thead>
@@ -47,6 +47,20 @@
   </tbody>
 
 </table>
+
+<button (click)="addPozycja()">Dodaj pozycje</button>
+<table class="table" id="details">
+  <th></th>
+  <tr *ngFor="let pozycja of faktura.pozycje">
+    <td><input type="number" [(ngModel)]="pozycja.id"></td>
+    <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
+    <td><input type="" [(ngModel)]="pozycja."></td>
+
+
+    <td (click)="removePozycja(pozycja.id)">Usuń</td>
+  </tr>
+</table>
+
 
 <button class="btn" (click)="save()">Zapisz</button>
 
