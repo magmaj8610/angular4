@@ -19,8 +19,8 @@ export class InvoiceDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private fakturaService: FakturaService,
               private router: Router,
-              public uzytkownikService:UzytkownikService,
-              public klientService:KlientService) {
+              public uzytkownikService: UzytkownikService,
+              public klientService: KlientService) {
     this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.faktura = fakturaService.getFakturaFromLocal(params['id']);
@@ -30,6 +30,7 @@ export class InvoiceDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
+
   public download() {
 
     const elementToPrint = document.getElementById('details');

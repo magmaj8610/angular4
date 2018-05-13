@@ -48,6 +48,7 @@ export class TowarService {
     }
     this.storage.set("Towary", Towary);
   }
+
   public deleteTowarInLocal(towar: number): void {
     let Towary: Array<Towar> = this.storage.get("Towary");
     if (Towary == null) {
@@ -62,7 +63,7 @@ export class TowarService {
       i++;
     }
     if (index > -1) {
-      Towary.splice(index,1);
+      Towary.splice(index, 1);
     }
     this.storage.set("Towary", Towary);
   }

@@ -9,9 +9,9 @@ import {TowarService} from "../../shared/service/TowarService";
 })
 export class WarehouseEditComponent implements OnInit {
 
-  public towar:Towar = new Towar();
+  public towar: Towar = new Towar();
 
-  constructor(private towarService:TowarService, private router: Router, private route: ActivatedRoute) {
+  constructor(private towarService: TowarService, private router: Router, private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.towar = towarService.getTowarFromLocal(params['id']);
@@ -22,7 +22,7 @@ export class WarehouseEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  public save(){
+  public save() {
     this.towarService.saveTowarInLocal(this.towar);
     this.router.navigate(['lista_towarow']);
   }

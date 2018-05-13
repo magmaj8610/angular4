@@ -9,14 +9,15 @@ import {TowarService} from "../../shared/service/TowarService";
 })
 export class WarehouseCreateComponent implements OnInit {
 
-  public towar:Towar = new Towar();
+  public towar: Towar = new Towar();
 
-  constructor(private towarService:TowarService, private router: Router) { }
+  constructor(private towarService: TowarService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
-  public save(){
+  public save() {
     this.towarService.saveTowarInLocal(this.towar);
     this.router.navigate(['lista_towarow']);
   }

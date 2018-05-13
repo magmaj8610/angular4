@@ -48,7 +48,7 @@ export class KlientService {
     this.storage.set("Klienci", Klienci);
   }
 
-  public deleteKlientInLocal(klientid:number): void {
+  public deleteKlientInLocal(klientid: number): void {
     let Klienci: Array<Klient> = this.storage.get("Klienci");
     if (Klienci == null) {
       Klienci = new Array<Klient>();
@@ -62,7 +62,7 @@ export class KlientService {
       i++;
     }
     if (index > -1) {
-      Klienci.splice(index,1);
+      Klienci.splice(index, 1);
     }
     this.storage.set("Klienci", Klienci);
   }

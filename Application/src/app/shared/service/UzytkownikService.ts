@@ -57,12 +57,12 @@ export class UzytkownikService {
     let index = -1;
     for (let UzytkownikTemp of Uzytkownicy) {
       if (uzytkownik == UzytkownikTemp.id) {
-       index = i;
+        index = i;
       }
       i++;
     }
     if (index > -1) {
-      Uzytkownicy.splice(index,1);
+      Uzytkownicy.splice(index, 1);
     }
     this.storage.set("Uzytkownicy", Uzytkownicy);
   }

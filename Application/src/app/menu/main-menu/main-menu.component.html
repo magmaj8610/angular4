@@ -1,17 +1,25 @@
 <table class="table">
   <thead>
 
-    <tr><td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_uzytkownikow'}"
-        (click)="gotoPage('lista_uzytkownikow')">Lista użytowników</tr>
+  <tr>
+    <td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_uzytkownikow'}"
+        (click)="gotoPage('lista_uzytkownikow')">Lista użytowników
+  </tr>
 
-    <tr><td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_faktur'}"
-        (click)="gotoPage('lista_faktur')">Lista faktur</tr>
+  <tr>
+    <td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_faktur'}"
+        (click)="gotoPage('lista_faktur')">Lista faktur
+  </tr>
 
-    <tr><td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_klientow'}"
-        (click)="gotoPage('lista_klientow')">Lista Klientów</tr>
+  <tr>
+    <td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_klientow'}"
+        (click)="gotoPage('lista_klientow')">Lista Klientów
+  </tr>
 
-    <tr><td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_towarow'}"
-        (click)="gotoPage('lista_towarow')">Lista Towarów</tr>
+  <tr>
+    <td [ngClass]="{'activeLink': utilsService.selectedLink == 'lista_towarow'}"
+        (click)="gotoPage('lista_towarow')">Lista Towarów
+  </tr>
 
   </thead>
 </table>

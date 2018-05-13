@@ -9,14 +9,15 @@ import {Router} from "@angular/router";
 })
 export class ClientCreateComponent implements OnInit {
 
-  public klient:Klient = new Klient();
+  public klient: Klient = new Klient();
 
-  constructor(private klientService:KlientService, private router: Router) { }
+  constructor(private klientService: KlientService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
-  public save(){
+  public save() {
     this.klientService.saveKlientInLocal(this.klient);
     this.router.navigate(['lista_klientow']);
   }

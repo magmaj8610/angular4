@@ -14,11 +14,13 @@ export class UserListComponent {
   constructor(private uzytkownikService: UzytkownikService, private router: Router) {
     this.uzytkownicy = uzytkownikService.getUzytkownicyFromLocal();
   }
-  public delete(uzytkownikId:number){
+
+  public delete(uzytkownikId: number) {
     this.uzytkownikService.deleteUzytkownikInLocal(uzytkownikId);
     this.uzytkownicy = this.uzytkownikService.getUzytkownicyFromLocal();
   }
-  public newUzytkownik(){
+
+  public newUzytkownik() {
     this.router.navigate(['lista_uzytkownikow/stworz/']);
   }
 

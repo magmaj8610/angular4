@@ -8,11 +8,11 @@ import {UzytkownikService} from "../../shared/service/UzytkownikService";
   selector: 'app-user-edit',
   templateUrl: './user-edit.component.html'
 })
-export class UserEditComponent  {
+export class UserEditComponent {
 
   public uzytkownik: Uzytkownik = new Uzytkownik();
 
-  constructor(private route: ActivatedRoute, private router: Router,private uzytkownikService: UzytkownikService) {
+  constructor(private route: ActivatedRoute, private router: Router, private uzytkownikService: UzytkownikService) {
     this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.uzytkownik = uzytkownikService.getUzytkownikFromLocal(params['id']);

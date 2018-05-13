@@ -9,9 +9,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class ClientEditComponent implements OnInit {
 
-  public klient:Klient = new Klient();
+  public klient: Klient = new Klient();
 
-  constructor(private klientService:KlientService,private router:Router,private route: ActivatedRoute) {
+  constructor(private klientService: KlientService, private router: Router, private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.klient = klientService.getKlientFromLocal(params['id']);
@@ -20,11 +20,10 @@ export class ClientEditComponent implements OnInit {
   }
 
 
-
   ngOnInit() {
   }
 
-  public save(){
+  public save() {
     this.klientService.saveKlientInLocal(this.klient);
     this.router.navigate(['lista_klientow']);
   }

@@ -17,13 +17,13 @@ export class InvoiceCreateComponent {
 
   constructor(private fakturaService: FakturaService,
               private router: Router,
-              public uzytkownikService:UzytkownikService,
-              public klientService:KlientService,
-              public towarService:TowarService) {
-    if(uzytkownikService.getUzytkownicyFromLocal() != null && uzytkownikService.getUzytkownicyFromLocal().length > 0) {
+              public uzytkownikService: UzytkownikService,
+              public klientService: KlientService,
+              public towarService: TowarService) {
+    if (uzytkownikService.getUzytkownicyFromLocal() != null && uzytkownikService.getUzytkownicyFromLocal().length > 0) {
       this.faktura.sprzedawca = uzytkownikService.getUzytkownicyFromLocal()[0];
     }
-    if(klientService.getKlienciFromLocal() != null && klientService.getKlienciFromLocal().length > 0){
+    if (klientService.getKlienciFromLocal() != null && klientService.getKlienciFromLocal().length > 0) {
       this.faktura.klient = klientService.getKlienciFromLocal()[0];
     }
   }
@@ -36,21 +36,21 @@ export class InvoiceCreateComponent {
 
   removePozycja(id: any) {
     let selectPozycja;
-    for(let pozycja of this.faktura.pozycje){
-      if(pozycja.id == id){
+    for (let pozycja of this.faktura.pozycje) {
+      if (pozycja.id == id) {
         selectPozycja = id;
       }
     }
-    if(selectPozycja != null){
-      this.faktura.pozycje.splice(selectPozycja,1);
+    if (selectPozycja != null) {
+      this.faktura.pozycje.splice(selectPozycja, 1);
     }
   }
 
   addPozycja() {
-    let pozycja:Pozycja = new Pozycja();
-    if(this.faktura.pozycje != null){
+    let pozycja: Pozycja = new Pozycja();
+    if (this.faktura.pozycje != null) {
       pozycja.id = this.faktura.pozycje.length;
-    }else{
+    } else {
       pozycja.id = 0;
       this.faktura.pozycje = new Array<Pozycja>();
     }
@@ -58,14 +58,15 @@ export class InvoiceCreateComponent {
   }
 
 
-  byId(item1,item2){
-    if(item1 == null || item2 == null){
+  byId(item1, item2) {
+    if (item1 == null || item2 == null) {
       return false;
-    }else {
+    } else {
       return item1.id == item2.id;
     }
   }
-  count(pozycja:Pozycja){
+
+  count(pozycja: Pozycja) {
     pozycja.ceneNetto = pozycja.jednostkaMiary * pozycja.ilosc;
     pozycja.wartoscBrutto = pozycja.ceneNetto * (pozycja.wartoscVat / 100 + 1);
   }

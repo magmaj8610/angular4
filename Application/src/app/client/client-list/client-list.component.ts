@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   selector: 'app-client-list',
   templateUrl: './client-list.component.html'
 })
-export class ClientListComponent{
+export class ClientListComponent {
 
   public klienci: Array<Klient> = new Array<Klient>();
 
@@ -15,11 +15,12 @@ export class ClientListComponent{
     this.klienci = klientService.getKlienciFromLocal();
   }
 
-  public delete(clientId:number){
+  public delete(clientId: number) {
     this.klientService.deleteKlientInLocal(clientId);
     this.klienci = this.klientService.getKlienciFromLocal();
   }
-  public newKlient(){
+
+  public newKlient() {
     this.router.navigate(['lista_klientow/stworz/']);
   }
 }

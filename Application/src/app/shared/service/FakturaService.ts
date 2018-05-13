@@ -48,6 +48,7 @@ export class FakturaService {
     }
     this.storage.set("Faktury", Faktury);
   }
+
   public deleteFakturaInLocal(faktura: number): void {
     let Faktury: Array<Faktura> = this.storage.get("Faktury");
     if (Faktury == null) {
@@ -62,7 +63,7 @@ export class FakturaService {
       i++;
     }
     if (index > -1) {
-      Faktury.splice(index,1);
+      Faktury.splice(index, 1);
     }
     this.storage.set("Faktury", Faktury);
   }

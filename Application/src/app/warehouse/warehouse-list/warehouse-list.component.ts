@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   selector: 'app-warehouse-list',
   templateUrl: './warehouse-list.component.html'
 })
-export class WarehouseListComponent   {
+export class WarehouseListComponent {
 
   public towary: Array<Towar> = new Array<Towar>();
 
@@ -15,12 +15,12 @@ export class WarehouseListComponent   {
     this.towary = towarService.getTowaryFromLocal();
   }
 
-  public delete(towarId:number){
+  public delete(towarId: number) {
     this.towarService.deleteTowarInLocal(towarId);
     this.towary = this.towarService.getTowaryFromLocal();
   }
 
-  public newTowar(){
+  public newTowar() {
     this.router.navigate(['lista_towarow/stworz/']);
   }
 }
