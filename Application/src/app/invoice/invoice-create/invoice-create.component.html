@@ -21,7 +21,7 @@
   </tr>
   <tr>
     <td>Sprzedawca</td>
-    <select name="faktura.sprzedawca" ngModel>
+    <select   [compareWith]="byId" [(ngModel)]="faktura.sprzedawca">
       <option *ngFor="let sprzedawca of uzytkownikService.getUzytkownicyFromLocal()" [ngValue]="sprzedawca">
         {{ sprzedawca.nazwa }}
       </option>
@@ -29,7 +29,7 @@
   </tr>
   <tr>
     <td>Klient</td>
-    <select name="faktura.klient" ngModel>
+    <select [compareWith]="byId"   [(ngModel)]="faktura.klient">
       <option *ngFor="let klient of klientService.getKlienciFromLocal()" [ngValue]="klient">
         {{ klient.nazwa }}
       </option>
@@ -56,7 +56,7 @@
     <th>Cena brutto</th>
     <tr *ngFor="let pozycja of faktura.pozycje">
       <td><input type="number" [(ngModel)]="pozycja.id" readonly></td>
-      <select name="pozycja.nazwa" ngModel>
+      <select [compareWith]="byId"   [(ngModel)]="pozycja.nazwa">
         <option *ngFor="let towar of towarService.getTowaryFromLocal()" [ngValue]="towar">
           {{ towar.nazwa }}
         </option>
