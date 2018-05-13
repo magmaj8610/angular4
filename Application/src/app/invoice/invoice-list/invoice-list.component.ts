@@ -17,5 +17,7 @@ export class InvoiceListComponent{
     this.fakturaService.deleteFakturaInLocal(fakturaId);
     this.faktury = this.fakturaService.getFakturyFromLocal();
   }
-
+  public clone(faktura:Faktura){
+    this.faktury.push(faktura);
+  }
 }
