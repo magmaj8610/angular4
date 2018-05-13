@@ -1,101 +1,99 @@
-<table class="table" id="details" style="background-color: white">
-  <tbody>
-  <tr>
-    <td>ID</td>
-    <td><span>{{faktura.id}}</span></td>
-  </tr>
-  <tr>
-    <td>Data Wystawienia</td>
-    <td>{{faktura.dataWystawienia}}</td>
-  </tr>
-  <tr>
-    <td>Data Płatności</td>
-    <td>{{faktura.dataPlatnosci}}</td>
-  </tr>
-  <tr>
-    <td>Forma Płatności</td>
-    <td>{{faktura.formaPlatnosci}}</td>
-  </tr>
+<div id="details" style="background-color: white">
+  <table class="table" >
+    <tbody>
+    <tr>
+      <td>ID</td>
+      <td><span>{{faktura.id}}</span></td>
+    </tr>
+    <tr>
+      <td>Data Wystawienia</td>
+      <td>{{faktura.dataWystawienia}}</td>
+    </tr>
+    <tr>
+      <td>Data Płatności</td>
+      <td>{{faktura.dataPlatnosci}}</td>
+    </tr>
+    <tr>
+      <td>Forma Płatności</td>
+      <td>{{faktura.formaPlatnosci}}</td>
+    </tr>
+    <tr>
+      <td>Numer Faktury</td>
+      <td>{{faktura.nrFaktury}}</td>
+    </tr>
+    <tr>
+      <td>Uwagi</td>
+      <td>{{faktura.uwagi}}</td>
+    </tr>
+    </tbody>
+  </table>
 
-  <tr>
-    <td>Numer Faktury</td>
-    <td>{{faktura.nrFaktury}}</td>
-  </tr>
-  <tr>
-    <td>Uwagi</td>
-    <td>{{faktura.uwagi}}</td>
-  </tr>
+  Sprzedawca
+  <table class="table">
+    <th>ID</th>
+    <th>Nazwa</th>
+    <th>Ulica i numer lokalu</th>
+    <th>Miasto</th>
+    <th>Kod pocztowy</th>
+    <th>NIP</th>
+    <th>login</th>
+    <th>Hasło</th>
+    <th>Logo</th>
+    <th>Numer konta</th>
+    <th>Bank</th>
+    <tr>
+      <td>{{faktura.sprzedawca.id}}</td>
+      <td>{{faktura.sprzedawca.nazwa}}</td>
+      <td>{{faktura.sprzedawca.ulica}}</td>
+      <td>{{faktura.sprzedawca.miasto}}</td>
+      <td>{{faktura.sprzedawca.kodPocztowy}}</td>
+      <td>{{faktura.sprzedawca.nip}}</td>
+      <td>{{faktura.sprzedawca.login}}</td>
+      <td>{{faktura.sprzedawca.haslo}}</td>
+      <td><img src="https://www.gravatar.com/avatar/{{faktura.sprzedawca.logoId}}"></td>
+      <td>{{faktura.sprzedawca.numerKonta}}</td>
+      <td>{{faktura.sprzedawca.bank}}</td>
+    </tr>
+  </table>
 
-  </tbody>
+  Klient
+  <table class="table">
+    <th>ID</th>
+    <th>Nazwa klienta</th>
+    <th>Ulica i numer lokalu</th>
+    <th>Miasto</th>
+    <th>Kod pocztowy</th>
+    <th>NIP</th>
+    <tr>
+      <td>{{faktura.klient.id}}</td>
+      <td>{{faktura.klient.nazwa}}</td>
+      <td>{{faktura.klient.ulica}}</td>
+      <td>{{faktura.klient.miasto}}</td>
+      <td>{{faktura.klient.kodPocztowy}}</td>
+      <td>{{faktura.klient.nip}}</td>
+    </tr>
+  </table>
 
-</table>
+  Pozycje
+  <table class="table">
+    <th>ID</th>
+    <th>Nazwa</th>
+    <th>Jednostka miary</th>
+    <th>Ilość</th>
+    <th>Cena netto</th>
+    <th>Wartość Vat</th>
+    <th>Cena brutto</th>
+    <tr *ngFor="let pozycja of faktura.pozycje">
+      <td>{{pozycja.id}}</td>
+      <td>{{pozycja.nazwa.nazwa}}</td>
+      <td>{{pozycja.jednostkaMiary}}</td>
+      <td>{{pozycja.ilosc}}</td>
+      <td>{{pozycja.ceneNetto}}</td>
+      <td>{{pozycja.wartoscVat}}</td>
+      <td>{{pozycja.wartoscBrutto}}</td>
+    </tr>
 
-Sprzedawca
-<table class="table" >
-  <th>ID</th>
-  <th>Nazwa</th>
-  <th>Ulica i numer lokalu</th>
-  <th>Miasto</th>
-  <th>Kod pocztowy</th>
-  <th>NIP</th>
-  <th>login</th>
-  <th>Hasło</th>
-  <th>Logo</th>
-  <th>Numer konta</th>
-  <th>Bank</th>
-  <tr>
-    <td>{{faktura.sprzedawca.id}}</td>
-    <td>{{faktura.sprzedawca.nazwa}}</td>
-    <td>{{faktura.sprzedawca.ulica}}</td>
-    <td>{{faktura.sprzedawca.miasto}}</td>
-    <td>{{faktura.sprzedawca.kodPocztowy}}</td>
-    <td>{{faktura.sprzedawca.nip}}</td>
-    <td>{{faktura.sprzedawca.login}}</td>
-    <td>{{faktura.sprzedawca.haslo}}</td>
-    <td><img src="https://www.gravatar.com/avatar/{{faktura.sprzedawca.logoId}}"></td>
-    <td>{{faktura.sprzedawca.numerKonta}}</td>
-    <td>{{faktura.sprzedawca.bank}}</td>
-  </tr>
-</table>
-
-Klient
-<table class="table" >
-  <th>ID</th>
-  <th>Nazwa klienta</th>
-  <th>Ulica i numer lokalu</th>
-  <th>Miasto</th>
-  <th>Kod pocztowy</th>
-  <th>NIP</th>
-  <tr>
-    <td>{{faktura.klient.id}}></td>
-    <td>{{faktura.klient.nazwa}}></td>
-    <td>{{faktura.klient.ulica}}></td>
-    <td>{{faktura.klient.miasto}}></td>
-    <td>{{faktura.klient.kodPocztowy}}></td>
-    <td>{{faktura.klient.nip}}></td>
-  </tr>
-</table>
-
-Pozycje
-<table class="table" >
-  <th>ID</th>
-  <th>Nazwa</th>
-  <th>Jednostka miary</th>
-  <th>Ilość</th>
-  <th>Cena netto</th>
-  <th>Wartość Vat</th>
-  <th>Cena brutto</th>
-  <tr *ngFor="let pozycja of faktura.pozycje">
-    <td>{{pozycja.id}}</td>
-    <td>{{pozycja.nazwa.nazwa}}</td>
-    <td>{{pozycja.jednostkaMiary}}</td>
-    <td>{{pozycja.ilosc}}</td>
-    <td>{{pozycja.ceneNetto}}</td>
-    <td>{{pozycja.wartoscVat}}</td>
-    <td>{{pozycja.wartoscBrutto}}</td>
-  </tr>
-
-</table>
-
+  </table>
+</div>
 
 <button (click)="download()">Pobierz</button>
