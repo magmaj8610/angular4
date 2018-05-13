@@ -5,6 +5,7 @@ import {Faktura} from "../../shared/model/Faktura";
 import {UzytkownikService} from "../../shared/service/UzytkownikService";
 import {KlientService} from "../../shared/service/KlientService";
 import {Pozycja} from "../../shared/model/Pozycja";
+import {TowarService} from "../../shared/service/TowarService";
 
 
 @Component({
@@ -18,7 +19,8 @@ export class InvoiceEditComponent {
               private fakturaService: FakturaService,
               private router: Router,
               public uzytkownikService:UzytkownikService,
-              public klientService:KlientService) {
+              public klientService:KlientService,
+              public towarService:TowarService) {
     this.route.params.subscribe(params => {
       if (params['id'] != null) {
         this.faktura = fakturaService.getFakturaFromLocal(params['id']);
