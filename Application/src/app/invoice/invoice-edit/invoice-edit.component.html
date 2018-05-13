@@ -21,11 +21,19 @@
   </tr>
   <tr>
     <td>Sprzedawca</td>
-    <td><input type="text" [(ngModel)]="faktura.sprzedawca"></td>
+    <select name="faktura.sprzedawca" ngModel>
+      <option *ngFor="let sprzedawca of uzytkownikService.getUzytkownicyFromLocal()" [ngValue]="sprzedawca.id">
+        {{ sprzedawca.nazwa }}
+      </option>
+    </select>
   </tr>
   <tr>
     <td>Klient</td>
-    <td><input type="text" [(ngModel)]="faktura.klient"></td>
+    <select name="faktura.klient" ngModel>
+      <option *ngFor="let klient of klientService.getKlienciFromLocal()" [ngValue]="klient.id">
+        {{ klient.nazwa }}
+      </option>
+    </select>
   </tr>
   <tr>
     <td>Numer Faktury</td>
@@ -40,6 +48,5 @@
 
 </table>
 
-
 <button class="btn" (click)="save()">Zapisz</button>
-<button (click)="download()">Pobierz</button>
+

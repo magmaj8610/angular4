@@ -11,8 +11,9 @@
     <th>Sprzedawca</th>
     <th>Klient</th>
     <th>Numer faktury</th>
-    <th>Pozycje</th>
     <th>Uwagi</th>
+    <th>Szczegóły</th>
+    <th>Usuń</th>
   </tr>
   </thead>
   <tbody>
@@ -26,6 +27,7 @@
     <td>{{temp.nrFaktury}}</td>
     <td>{{temp.pozycje}}</td>
     <td>{{temp.uwagi}}</td>
+    <td><a href="lista_faktur/szczegoly/{{temp.id}}">Szczegóły</a></td>
     <td (click)="delete(temp.id)">Usuń</td>
   </tr>
   </tbody>

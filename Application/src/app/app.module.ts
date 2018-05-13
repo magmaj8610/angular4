@@ -24,6 +24,7 @@ import {ClientCreateComponent} from "./client/client-create/client-create.compon
 import { WarehouseEditComponent } from './warehouse/warehouse-edit/warehouse-edit.component';
 import { WarehouseCreateComponent } from './warehouse/warehouse-create/warehouse-create.component';
 import { WarehouseListComponent } from './warehouse/warehouse-list/warehouse-list.component';
+import { InvoiceDetailsComponent } from './invoice/invoice-details/invoice-details.component';
 
 
 
@@ -42,7 +43,8 @@ import { WarehouseListComponent } from './warehouse/warehouse-list/warehouse-lis
     ClientCreateComponent,
     WarehouseEditComponent,
     WarehouseCreateComponent,
-    WarehouseListComponent
+    WarehouseListComponent,
+    InvoiceDetailsComponent
   ],
   imports: [
     BrowserModule,

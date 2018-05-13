@@ -29,6 +29,10 @@ const routes: Routes = [
   {path: 'lista_towarow', component: WarehouseListComponent},
   {path: 'lista_towarow/stworz', component: WarehouseCreateComponent},
   {path: 'lista_towarow/edycja/:id', component: WarehouseEditComponent},
+
+  {path: 'lista_towarow', component: WarehouseListComponent},
+  {path: 'lista_towarow/stworz', component: WarehouseCreateComponent},
+  {path: 'lista_towarow/edycja/:id', component: WarehouseEditComponent},
 ];
 
 @NgModule({
