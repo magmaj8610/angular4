@@ -40,4 +40,14 @@
 
 </table>
 
+<table class="table" id="details">
+  <th></th>
+  <tr *ngFor="let pozycja of faktura.pozycje">
+    <td><input type="number" [(ngModel)]="pozycja.id"></td>
+    <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
+    <td><input type="" [(ngModel)]="pozycja."></td>
+  </tr>
+</table>
+
+
 <button (click)="download()">Pobierz</button>
