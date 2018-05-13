@@ -58,7 +58,7 @@
   <th>Wartość Vat</th>
   <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
-    <td><input type="number" [(ngModel)]="pozycja.id"></td>
+    <td><input type="number" [(ngModel)]="pozycja.id" readonly></td>
     <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
     <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary"></td>
     <td><input type="number" [(ngModel)]="pozycja.ilosc"></td>

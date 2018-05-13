@@ -39,6 +39,7 @@ export class InvoiceCreateComponent {
       pozycja.id = this.faktura.pozycje.length;
     }else{
       pozycja.id = 0;
+      this.faktura.pozycje = new Array<Pozycja>();
     }
     this.faktura.pozycje.push(pozycja);
   }

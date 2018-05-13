@@ -41,12 +41,13 @@ export class InvoiceEditComponent {
   }
 
   addPozycja() {
-      let pozycja:Pozycja = new Pozycja();
-      if(this.faktura.pozycje != null){
-        pozycja.id = this.faktura.pozycje.length;
-      }else{
-        pozycja.id = 0;
-      }
-      this.faktura.pozycje.push(pozycja);
+    let pozycja:Pozycja = new Pozycja();
+    if(this.faktura.pozycje != null){
+      pozycja.id = this.faktura.pozycje.length;
+    }else{
+      pozycja.id = 0;
+      this.faktura.pozycje = new Array<Pozycja>();
+    }
+    this.faktura.pozycje.push(pozycja);
   }
 }

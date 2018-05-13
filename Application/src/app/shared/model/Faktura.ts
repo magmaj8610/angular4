@@ -8,7 +8,7 @@ export class Faktura {
   sprzedawca:string;
   klient:string;
   nrFaktury:number;
-  pozycje: Pozycja[];
+  pozycje: Array<Pozycja>;
   uwagi:string;
   korekta:boolean;
   proForma:boolean;
