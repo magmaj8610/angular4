@@ -19,4 +19,7 @@ export class ClientListComponent{
     this.klientService.deleteKlientInLocal(clientId);
     this.klienci = this.klientService.getKlienciFromLocal();
   }
+  public newKlient(){
+    this.router.navigate(['lista_klientow/stworz/']);
+  }
 }

@@ -1,6 +1,10 @@
-<span class="title">Lista faktur</span>
-<br>
-<input type="button" value="Nowa faktura" [routerLink]="['stworz']" class="btn">
+<table class="table">
+  <thead>
+  <tr><td (click)="newFaktura()" >Nowa Faktura</td></tr>
+  </thead>
+</table>
+
+
 <table class="table">
   <thead>
   <tr>

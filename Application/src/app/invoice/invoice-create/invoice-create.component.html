@@ -1,27 +1,35 @@
-<table class="table">
+<table class="table table-striped table-bordered table-hover table-condensed table-responsive">
   <thead>
   <th>Pola do wypełnienia</th>
   </thead>
   <tbody>
   <tr>
     <td>ID</td>
-    <td><input type="number" [(ngModel)]="faktura.id" required></td>
+    <td><input type="number" [(ngModel)]="faktura.id" required class="form-control"> </td>
   </tr>
   <tr>
     <td>Data Wystawienia</td>
-    <td><input type="date" [(ngModel)]="faktura.dataWystawienia"></td>
+    <td><input type="date" [(ngModel)]="faktura.dataWystawienia" class="form-control"> </td>
   </tr>
   <tr>
     <td>Data Płatności</td>
-    <td><input type="date" [(ngModel)]="faktura.dataPlatnosci"></td>
+    <td><input type="date" [(ngModel)]="faktura.dataPlatnosci" class="form-control"></td>
   </tr>
   <tr>
     <td>Forma Płatności</td>
-    <td><input type="text" [(ngModel)]="faktura.formaPlatnosci"></td>
+    <td><input type="text" [(ngModel)]="faktura.formaPlatnosci" class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Numer Faktury</td>
+    <td><input type="number" [(ngModel)]="faktura.nrFaktury" class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Uwagi</td>
+    <td><input type="text" [(ngModel)]="faktura.uwagi" class="form-control"></td>
   </tr>
   <tr>
     <td>Sprzedawca</td>
-    <select   [compareWith]="byId" [(ngModel)]="faktura.sprzedawca">
+    <select   [compareWith]="byId" [(ngModel)]="faktura.sprzedawca" class="form-control">
       <option *ngFor="let sprzedawca of uzytkownikService.getUzytkownicyFromLocal()" [ngValue]="sprzedawca">
         {{ sprzedawca.nazwa }}
       </option>
@@ -29,23 +37,23 @@
   </tr>
   <tr>
     <td>Klient</td>
-    <select [compareWith]="byId"   [(ngModel)]="faktura.klient">
+    <select [compareWith]="byId"   [(ngModel)]="faktura.klient" class="form-control">
       <option *ngFor="let klient of klientService.getKlienciFromLocal()" [ngValue]="klient">
         {{ klient.nazwa }}
       </option>
     </select>
   </tr>
-  <tr>
-    <td>Numer Faktury</td>
-    <td><input type="number" [(ngModel)]="faktura.nrFaktury"></td>
-  </tr>
-  <tr>
-    <td>Uwagi</td>
-    <td><input type="text" [(ngModel)]="faktura.uwagi"></td>
-  </tr>
-
   </tbody>
-  <button (click)="addPozycja()">Dodaj pozycje</button>
+
+
+  <table class="table">
+    <tr>
+      <td> <button (click)="addPozycja()" class="btn">Dodaj pozycje</button></td>
+      <td> <button (click)="save()" class="btn">Zapisz całość</button></td>
+    </tr>
+  </table>
+
+
   <table class="table" >
     <th>ID</th>
     <th>Nazwa</th>
@@ -70,6 +78,4 @@
     </tr>
 
   </table>
-  <button class="btn" (click)="save()">Zapisz</button>
-
 </table>

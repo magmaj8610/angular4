@@ -56,4 +56,11 @@ export class InvoiceEditComponent {
     }
     this.faktura.pozycje.push(pozycja);
   }
+  byId(item1,item2){
+    if(item1 == null || item2 == null){
+      return false;
+    }else {
+      return item1.id == item2.id;
+    }
+  }
 }

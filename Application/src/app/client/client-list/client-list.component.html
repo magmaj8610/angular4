@@ -1,6 +1,8 @@
-<span class="title">Lista klientów</span>
-<br>
-<input type="button" value="Nowy klient" [routerLink]="['stworz']" class="btn"><br>
+<table class="table">
+  <thead>
+  <tr><td (click)="newKlient()" >Nowy klient</td></tr>
+  </thead>
+</table>
 <table class="table">
   <thead>
   <tr>
