@@ -33,31 +33,31 @@
 Sprzedawca
 <table class="table" >
   <th>ID</th>
-  <tr *ngFor="let sprzedawca of faktura.sprzedawca">
-    <td>{{sprzedawca.id}}</td>
-    <td>{{sprzedawca.nazwa}}</td>
-    <td>{{sprzedawca.ulica}}</td>
-    <td>{{sprzedawca.miasto}}</td>
-    <td>{{sprzedawca.kodPocztowy}}</td>
-    <td>{{sprzedawca.nip}}</td>
-    <td>{{sprzedawca.login}}</td>
-    <td>{{sprzedawca.haslo}}</td>
-    <td><img src="https://www.gravatar.com/avatar/{{sprzedawca.logoId}}"></td>
-    <td>{{sprzedawca.numerKonta}}</td>
-    <td>{{sprzedawca.bank}}</td>
+  <tr>
+    <td>{{faktura.sprzedawca.id}}</td>
+    <td>{{faktura.sprzedawca.nazwa}}</td>
+    <td>{{faktura.sprzedawca.ulica}}</td>
+    <td>{{faktura.sprzedawca.miasto}}</td>
+    <td>{{faktura.sprzedawca.kodPocztowy}}</td>
+    <td>{{faktura.sprzedawca.nip}}</td>
+    <td>{{faktura.sprzedawca.login}}</td>
+    <td>{{faktura.sprzedawca.haslo}}</td>
+    <td><img src="https://www.gravatar.com/avatar/{{faktura.sprzedawca.logoId}}"></td>
+    <td>{{faktura.sprzedawca.numerKonta}}</td>
+    <td>{{faktura.sprzedawca.bank}}</td>
   </tr>
 </table>
 
 Klient
 <table class="table" >
   <th>ID</th>
-  <tr *ngFor="let klient of faktura.klient">
-    <td>{{klient.id}}></td>
-    <td>{{klient.nazwa}}></td>
-    <td>{{klient.ulica}}></td>
-    <td>{{klient.miasto}}></td>
-    <td>{{klient.kodPocztowy}}></td>
-    <td>{{klient.nip}}></td>
+  <tr>
+    <td>{{faktura.klient.id}}></td>
+    <td>{{faktura.klient.nazwa}}></td>
+    <td>{{faktura.klient.ulica}}></td>
+    <td>{{faktura.klient.miasto}}></td>
+    <td>{{faktura.klient.kodPocztowy}}></td>
+    <td>{{faktura.klient.nip}}></td>
   </tr>
 </table>
 
