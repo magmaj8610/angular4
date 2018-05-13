@@ -5,7 +5,7 @@
 </table>
 
 
-<table class="table">
+<table class="table table-striped table-bordered table-hover table-condensed table-responsive" id="details">
   <thead>
   <tr>
     <th>ID</th>
@@ -15,7 +15,6 @@
     <th>Sprzedawca</th>
     <th>Klient</th>
     <th>Numer faktury</th>
-    <th>Uwagi</th>
     <th>Szczegóły</th>
     <th>Usuń</th>
   </tr>
@@ -29,7 +28,6 @@
     <td>{{temp.sprzedawca.nazwa}}</td>
     <td>{{temp.klient.nazwa}}</td>
     <td>{{temp.nrFaktury}}</td>
-    <td>{{temp.uwagi}}</td>
     <td><a href="lista_faktur/szczegoly/{{temp.id}}">Szczegóły</a></td>
     <td (click)="delete(temp.id)">Usuń</td>
     <td (click)="clone(temp)">Klonuj</td>
