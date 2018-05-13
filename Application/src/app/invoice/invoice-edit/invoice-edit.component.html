@@ -60,7 +60,7 @@
   <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
     <td><input type="number" [(ngModel)]="pozycja.id" readonly class="form-control"></td>
-    <select name="pozycja.nazwa" ngModel class="form-control">
+    <select [compareWith]="byId"   [(ngModel)]="pozycja.nazwa" class="form-control">
       <option *ngFor="let towar of towarService.getTowaryFromLocal()" [ngValue]="towar">
         {{ towar.nazwa }}
       </option>
