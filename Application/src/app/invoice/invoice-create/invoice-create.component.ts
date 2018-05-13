@@ -5,6 +5,7 @@ import {Faktura} from "../../shared/model/Faktura";
 import {UzytkownikService} from "../../shared/service/UzytkownikService";
 import {KlientService} from "../../shared/service/KlientService";
 import {Pozycja} from "../../shared/model/Pozycja";
+import {TowarService} from "../../shared/service/TowarService";
 
 @Component({
   selector: 'app-invoice-create',
@@ -17,7 +18,8 @@ export class InvoiceCreateComponent {
   constructor(private fakturaService: FakturaService,
               private router: Router,
               public uzytkownikService:UzytkownikService,
-              public klientService:KlientService) {
+              public klientService:KlientService,
+              public towarService:TowarService) {
   }
 
   public save() {
