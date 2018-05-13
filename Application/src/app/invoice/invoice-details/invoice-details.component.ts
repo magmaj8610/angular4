@@ -39,4 +39,27 @@ export class InvoiceDetailsComponent implements OnInit {
     });
 
   }
+
+  downloadProForma() {
+    const elementToPrint = document.getElementById('details');
+    const pdf = new jsPDF('p', 'pt', 'a4');
+    pdf.addHTML(elementToPrint, () => {
+      addWaterMark(pdf);
+      pdf.save('invoice.pdf');
+    });
+
+
+    function addWaterMark(doc) {
+      var totalPages = doc.internal.getNumberOfPages();
+
+      for (let i = 1; i <= totalPages; i++) {
+        doc.setPage(i);
+        //doc.addImage(imgData, 'PNG', 40, 40, 75, 75);
+        doc.setTextColor(150);
+        doc.text(50, doc.internal.pageSize.height - 30, 'Watermark');
+      }
+
+      return doc;
+    }
+  }
 }
