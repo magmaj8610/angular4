@@ -3,13 +3,6 @@ body{
 }
 
 .activeLink{
-  background-color: red;
-}
-.mouseover{
   background-color: blueviolet;
 }
 
-
-.title {
-  background-color: chartreuse;
-}
