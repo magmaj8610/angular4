@@ -12,11 +12,13 @@ import {ClientEditComponent} from "./client/client-edit/client-edit.component";
 import {WarehouseCreateComponent} from "./warehouse/warehouse-create/warehouse-create.component";
 import {WarehouseListComponent} from "./warehouse/warehouse-list/warehouse-list.component";
 import {WarehouseEditComponent} from "./warehouse/warehouse-edit/warehouse-edit.component";
+import {InvoiceDetailsComponent} from "./invoice/invoice-details/invoice-details.component";
 
 const routes: Routes = [
   {path: 'lista_faktur', component: InvoiceListComponent},
   {path: 'lista_faktur/stworz', component: InvoiceCreateComponent},
   {path: 'lista_faktur/edycja/:id', component: InvoiceEditComponent},
+  {path: 'szczegoly_faktury', component: InvoiceDetailsComponent},
 
   {path: 'lista_uzytkownikow', component: UserListComponent},
   {path: 'lista_uzytkownikow/stworz', component: UserCreateComponent},
@@ -30,9 +32,6 @@ const routes: Routes = [
   {path: 'lista_towarow/stworz', component: WarehouseCreateComponent},
   {path: 'lista_towarow/edycja/:id', component: WarehouseEditComponent},
 
-  {path: 'lista_towarow', component: WarehouseListComponent},
-  {path: 'lista_towarow/stworz', component: WarehouseCreateComponent},
-  {path: 'lista_towarow/edycja/:id', component: WarehouseEditComponent},
 ];
 
 @NgModule({

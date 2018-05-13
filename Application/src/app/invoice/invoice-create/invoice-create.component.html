@@ -51,14 +51,15 @@
     <tr *ngFor="let pozycja of faktura.pozycje">
       <td><input type="number" [(ngModel)]="pozycja.id"></td>
       <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
-      <td><input type="" [(ngModel)]="pozycja."></td>
-
-
+      <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary"></td>
+      <td><input type="number" [(ngModel)]="pozycja.ilosc"></td>
+      <td><input type="number" [(ngModel)]="pozycja.cenaNetto"></td>
+      <td><input type="number" [(ngModel)]="pozycja.wartoscVat"></td>
+      <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto"></td>
       <td (click)="removePozycja(pozycja.id)">Usuń</td>
     </tr>
+
   </table>
-
-
   <button class="btn" (click)="save()">Zapisz</button>
 
 </table>
