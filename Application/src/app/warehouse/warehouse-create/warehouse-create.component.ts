@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Towar} from "../../shared/model/Towar";
 import {Router} from "@angular/router";
 import {TowarService} from "../../shared/service/TowarService";

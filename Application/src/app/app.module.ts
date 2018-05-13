@@ -12,7 +12,7 @@ import {FormsModule} from "@angular/forms";
 import {UserListComponent} from "./user/user-list/user-list.component";
 import {UserCreateComponent} from "./user/user-create/user-create.component";
 import {UserEditComponent} from "./user/user-edit/user-edit.component";
-import { MainMenuComponent } from './menu/main-menu/main-menu.component';
+import {MainMenuComponent} from './menu/main-menu/main-menu.component';
 import {UtilsService} from "./shared/service/UtilsService";
 import {FakturaService} from "./shared/service/FakturaService";
 import {UzytkownikService} from "./shared/service/UzytkownikService";
@@ -21,11 +21,10 @@ import {TowarService} from "./shared/service/TowarService";
 import {ClientEditComponent} from "./client/client-edit/client-edit.component";
 import {ClientListComponent} from "./client/client-list/client-list.component";
 import {ClientCreateComponent} from "./client/client-create/client-create.component";
-import { WarehouseEditComponent } from './warehouse/warehouse-edit/warehouse-edit.component';
-import { WarehouseCreateComponent } from './warehouse/warehouse-create/warehouse-create.component';
-import { WarehouseListComponent } from './warehouse/warehouse-list/warehouse-list.component';
-import { InvoiceDetailsComponent } from './invoice/invoice-details/invoice-details.component';
-
+import {WarehouseEditComponent} from './warehouse/warehouse-edit/warehouse-edit.component';
+import {WarehouseCreateComponent} from './warehouse/warehouse-create/warehouse-create.component';
+import {WarehouseListComponent} from './warehouse/warehouse-list/warehouse-list.component';
+import {InvoiceDetailsComponent} from './invoice/invoice-details/invoice-details.component';
 
 
 @NgModule({

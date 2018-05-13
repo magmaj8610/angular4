@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Klient} from "../../shared/model/Klient";
 import {KlientService} from "../../shared/service/KlientService";
 import {ActivatedRoute, Router} from "@angular/router";

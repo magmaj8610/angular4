@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component} from '@angular/core';
 import {Klient} from "../../shared/model/Klient";
 import {KlientService} from "../../shared/service/KlientService";
 import {Router} from "@angular/router";
