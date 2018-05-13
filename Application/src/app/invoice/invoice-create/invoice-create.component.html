@@ -22,7 +22,7 @@
   <tr>
     <td>Sprzedawca</td>
     <select name="faktura.sprzedawca" ngModel>
-      <option *ngFor="let sprzedawca of uzytkownikService.getUzytkownicyFromLocal()" [ngValue]="sprzedawca.id">
+      <option *ngFor="let sprzedawca of uzytkownikService.getUzytkownicyFromLocal()" [ngValue]="sprzedawca">
         {{ sprzedawca.nazwa }}
       </option>
     </select>
@@ -30,7 +30,7 @@
   <tr>
     <td>Klient</td>
     <select name="faktura.klient" ngModel>
-      <option *ngFor="let klient of klientService.getKlienciFromLocal()" [ngValue]="klient.id">
+      <option *ngFor="let klient of klientService.getKlienciFromLocal()" [ngValue]="klient">
         {{ klient.nazwa }}
       </option>
     </select>

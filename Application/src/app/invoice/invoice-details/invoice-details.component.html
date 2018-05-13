@@ -18,11 +18,11 @@
   </tr>
   <tr>
     <td>Sprzedawca</td>
-    <td>{{faktura.sprzedawca}}</td>
+    <td>{{faktura.sprzedawca.nazwa}}</td>
   </tr>
   <tr>
     <td>Klient</td>
-    <td>{{faktura.klient}}</td>
+    <td>{{faktura.klient.nazwa}}</td>
   </tr>
   <tr>
     <td>Numer Faktury</td>
@@ -37,6 +37,23 @@
 
 </table>
 
+Sprzedawca
+<table class="table" >
+  <th>ID</th>
+  <tr *ngFor="let sprzedawca of faktura.sprzedawca">
+    <td>{{sprzedawca.id}}</td>
+  </tr>
+</table>
+
+Klient
+<table class="table" >
+  <th>ID</th>
+  <tr *ngFor="let klient of faktura.klient">
+    <td>{{klient.id}}></td>
+  </tr>
+</table>
+
+Pozycje
 <table class="table" >
   <th>ID</th>
   <th>Nazwa</th>
@@ -50,10 +67,9 @@
     <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
     <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary"></td>
     <td><input type="number" [(ngModel)]="pozycja.ilosc"></td>
-    <td><input type="number" [(ngModel)]="pozycja.cenaNetto"></td>
+    <td><input type="number" [(ngModel)]="pozycja.ceneNetto"></td>
     <td><input type="number" [(ngModel)]="pozycja.wartoscVat"></td>
     <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto"></td>
-    <td (click)="removePozycja(pozycja.id)">Usuń</td>
   </tr>
 
 </table>
