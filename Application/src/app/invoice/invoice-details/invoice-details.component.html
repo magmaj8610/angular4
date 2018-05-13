@@ -16,14 +16,7 @@
     <td>Forma Płatności</td>
     <td>{{faktura.formaPlatnosci}}</td>
   </tr>
-  <tr>
-    <td>Sprzedawca</td>
-    <td>{{faktura.sprzedawca.nazwa}}</td>
-  </tr>
-  <tr>
-    <td>Klient</td>
-    <td>{{faktura.klient.nazwa}}</td>
-  </tr>
+
   <tr>
     <td>Numer Faktury</td>
     <td>{{faktura.nrFaktury}}</td>
@@ -42,6 +35,16 @@ Sprzedawca
   <th>ID</th>
   <tr *ngFor="let sprzedawca of faktura.sprzedawca">
     <td>{{sprzedawca.id}}</td>
+    <td>{{sprzedawca.nazwa}}</td>
+    <td>{{sprzedawca.ulica}}</td>
+    <td>{{sprzedawca.miasto}}</td>
+    <td>{{sprzedawca.kodPocztowy}}</td>
+    <td>{{sprzedawca.nip}}</td>
+    <td>{{sprzedawca.login}}</td>
+    <td>{{sprzedawca.haslo}}</td>
+    <td>{{sprzedawca.kogoId}}</td>
+    <td>{{sprzedawca.numerKonta}}</td>
+    <td>{{sprzedawca.bank}}</td>
   </tr>
 </table>
 
@@ -50,6 +53,11 @@ Klient
   <th>ID</th>
   <tr *ngFor="let klient of faktura.klient">
     <td>{{klient.id}}></td>
+    <td>{{klient.nazwa}}></td>
+    <td>{{klient.ulica}}></td>
+    <td>{{klient.miasto}}></td>
+    <td>{{klient.kodPocztowy}}></td>
+    <td>{{klient.nip}}></td>
   </tr>
 </table>
 
@@ -63,13 +71,13 @@ Pozycje
   <th>Wartość Vat</th>
   <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
-    <td><input type="number" [(ngModel)]="pozycja.id"></td>
-    <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
-    <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary"></td>
-    <td><input type="number" [(ngModel)]="pozycja.ilosc"></td>
-    <td><input type="number" [(ngModel)]="pozycja.ceneNetto"></td>
-    <td><input type="number" [(ngModel)]="pozycja.wartoscVat"></td>
-    <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto"></td>
+    <td>{{pozycja.id}}</td>
+    <td>{{pozycja.nazwa}}</td>
+    <td>{{pozycja.jednostkaMiary}}</td>
+    <td>{{pozycja.ilosc}}</td>
+    <td>{{pozycja.ceneNetto}}</td>
+    <td>{{pozycja.wartoscVat}}</td>
+    <td>{{pozycja.wartoscBrutto}}</td>
   </tr>
 
 </table>
