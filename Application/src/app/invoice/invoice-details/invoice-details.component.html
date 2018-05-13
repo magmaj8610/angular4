@@ -33,6 +33,16 @@
 Sprzedawca
 <table class="table" >
   <th>ID</th>
+  <th>Nazwa</th>
+  <th>Ulica i numer lokalu</th>
+  <th>Miasto</th>
+  <th>Kod pocztowy</th>
+  <th>NIP</th>
+  <th>login</th>
+  <th>Hasło</th>
+  <th>Logo</th>
+  <th>Numer konta</th>
+  <th>Bank</th>
   <tr *ngFor="let sprzedawca of faktura.sprzedawca">
     <td>{{sprzedawca.id}}</td>
     <td>{{sprzedawca.nazwa}}</td>
@@ -51,6 +61,11 @@ Sprzedawca
 Klient
 <table class="table" >
   <th>ID</th>
+  <th>Nazwa klienta</th>
+  <th>Ulica i numer lokalu</th>
+  <th>Miasto</th>
+  <th>Kod pocztowy</th>
+  <th>NIP</th>
   <tr *ngFor="let klient of faktura.klient">
     <td>{{klient.id}}></td>
     <td>{{klient.nazwa}}></td>
