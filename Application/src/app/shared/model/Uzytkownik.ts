@@ -7,7 +7,7 @@ export class Uzytkownik {
   nip:number;
   login:string;
   haslo:string;
-  logoId:number;
+  logoId:string;
   numerKonta:number;
   bank:string;
 }
