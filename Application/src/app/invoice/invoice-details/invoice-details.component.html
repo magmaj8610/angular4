@@ -1,52 +1,61 @@
 <table class="table" id="details" style="background-color: white">
-  <thead>
-  <th>Pola do edytowania</th>
-  </thead>
   <tbody>
   <tr>
     <td>ID</td>
-    <td><input type="number" [(ngModel)]="faktura.id"></td>
+    <td><span>{{faktura.id}}</span></td>
   </tr>
   <tr>
     <td>Data Wystawienia</td>
-    <td><input type="date" [(ngModel)]="faktura.dataWystawienia"></td>
+    <td>{{faktura.dataWystawienia}}</td>
   </tr>
   <tr>
     <td>Data Płatności</td>
-    <td><input type="date" [(ngModel)]="faktura.dataPlatnosci"></td>
+    <td>{{faktura.dataPlatnosci}}</td>
   </tr>
   <tr>
     <td>Forma Płatności</td>
-    <td><input type="text" [(ngModel)]="faktura.formaPlatnosci"></td>
+    <td>{{faktura.formaPlatnosci}}</td>
   </tr>
   <tr>
     <td>Sprzedawca</td>
-    <td><input type="text" [(ngModel)]="faktura.sprzedawca"></td>
+    <td>{{faktura.sprzedawca}}</td>
   </tr>
   <tr>
     <td>Klient</td>
-    <td><input type="text" [(ngModel)]="faktura.klient"></td>
+    <td>{{faktura.klient}}</td>
   </tr>
   <tr>
     <td>Numer Faktury</td>
-    <td><input type="number" [(ngModel)]="faktura.nrFaktury"></td>
+    <td>{{faktura.nrFaktury}}</td>
   </tr>
   <tr>
     <td>Uwagi</td>
-    <td><input type="text" [(ngModel)]="faktura.uwagi"></td>
+    <td>{{faktura.uwagi}}</td>
   </tr>
 
   </tbody>
 
 </table>
 
-<table class="table" id="details">
-  <th></th>
+<table class="table" >
+  <th>ID</th>
+  <th>Nazwa</th>
+  <th>Jednostka miary</th>
+  <th>Ilość</th>
+  <th>Cena netto</th>
+  <th>Wartość Vat</th>
+  <th>Cena brutto</th>
   <tr *ngFor="let pozycja of faktura.pozycje">
     <td><input type="number" [(ngModel)]="pozycja.id"></td>
     <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>
-    <td><input type="" [(ngModel)]="pozycja."></td>
+    <td><input type="text" [(ngModel)]="pozycja.jednostkaMiary"></td>
+    <td><input type="number" [(ngModel)]="pozycja.ilosc"></td>
+    <td><input type="number" [(ngModel)]="pozycja.cenaNetto"></td>
+    <td><input type="number" [(ngModel)]="pozycja.wartoscVat"></td>
+    <td><input type="number" [(ngModel)]="pozycja.wartoscBrutto"></td>
+    <td (click)="removePozycja(pozycja.id)">Usuń</td>
   </tr>
+
 </table>
 
 

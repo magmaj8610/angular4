@@ -46,8 +46,14 @@
 
   </tbody>
   <button (click)="addPozycja()">Dodaj pozycje</button>
-  <table class="table" id="details">
-    <th></th>
+  <table class="table" >
+    <th>ID</th>
+    <th>Nazwa</th>
+    <th>Jednostka miary</th>
+    <th>Ilość</th>
+    <th>Cena netto</th>
+    <th>Wartość Vat</th>
+    <th>Cena brutto</th>
     <tr *ngFor="let pozycja of faktura.pozycje">
       <td><input type="number" [(ngModel)]="pozycja.id"></td>
       <td><input type="text" [(ngModel)]="pozycja.nazwa"></td>

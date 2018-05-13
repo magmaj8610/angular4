@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'lista_faktur', component: InvoiceListComponent},
   {path: 'lista_faktur/stworz', component: InvoiceCreateComponent},
   {path: 'lista_faktur/edycja/:id', component: InvoiceEditComponent},
-  {path: 'szczegoly_faktury', component: InvoiceDetailsComponent},
+  {path: 'lista_faktur/szczegoly/:id', component: InvoiceDetailsComponent},
 
   {path: 'lista_uzytkownikow', component: UserListComponent},
   {path: 'lista_uzytkownikow/stworz', component: UserCreateComponent},
