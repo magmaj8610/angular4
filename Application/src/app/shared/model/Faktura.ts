@@ -9,5 +9,7 @@ export class Faktura {
   klient:string;
   nrFaktury:number;
   pozycje: Pozycja[];
-  uwagi:string
+  uwagi:string;
+  korekta:boolean;
+  proForma:boolean;
 }
