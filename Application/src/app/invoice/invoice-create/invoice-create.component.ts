@@ -26,10 +26,14 @@ export class InvoiceCreateComponent {
   }
 
   removePozycja(id: any) {
+    let selectPozycja;
     for(let pozycja of this.faktura.pozycje){
-      if(pozycja.id = id){
-        this.faktura.pozycje.splice(pozycja.id,1);
+      if(pozycja.id == id){
+        selectPozycja = id;
       }
+    }
+    if(selectPozycja != null){
+      this.faktura.pozycje.splice(selectPozycja,1);
     }
   }
 
