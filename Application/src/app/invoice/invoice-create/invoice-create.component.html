@@ -1,4 +1,4 @@
-<table class="table table-striped table-bordered table-hover ">
+<table class="table table-striped table-bordered table-hover table-condensed table-responsive">
   <thead>
   <th>Pola do wypełnienia</th>
   </thead>
@@ -20,6 +20,14 @@
     <td><input type="text" [(ngModel)]="faktura.formaPlatnosci" class="form-control"></td>
   </tr>
   <tr>
+    <td>Numer Faktury</td>
+    <td><input type="number" [(ngModel)]="faktura.nrFaktury" class="form-control"></td>
+  </tr>
+  <tr>
+    <td>Uwagi</td>
+    <td><input type="text" [(ngModel)]="faktura.uwagi" class="form-control"></td>
+  </tr>
+  <tr>
     <td>Sprzedawca</td>
     <select   [compareWith]="byId" [(ngModel)]="faktura.sprzedawca" class="form-control">
       <option *ngFor="let sprzedawca of uzytkownikService.getUzytkownicyFromLocal()" [ngValue]="sprzedawca">
@@ -34,14 +42,6 @@
         {{ klient.nazwa }}
       </option>
     </select>
-  </tr>
-  <tr>
-    <td>Numer Faktury</td>
-    <td><input type="number" [(ngModel)]="faktura.nrFaktury" class="form-control"></td>
-  </tr>
-  <tr>
-    <td>Uwagi</td>
-    <td><input type="text" [(ngModel)]="faktura.uwagi" class="form-control"></td>
   </tr>
   </tbody>
 
