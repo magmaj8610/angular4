@@ -63,4 +63,8 @@ export class InvoiceEditComponent {
       return item1.id == item2.id;
     }
   }
+  count(pozycja:Pozycja){
+    pozycja.ceneNetto = pozycja.jednostkaMiary * pozycja.ilosc;
+    pozycja.wartoscBrutto = pozycja.ceneNetto * (pozycja.wartoscVat / 100 + 1);
+  }
 }

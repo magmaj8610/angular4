@@ -3,7 +3,7 @@ import {Towar} from "./Towar";
 export class Pozycja {
   id:number;
   nazwa:Towar;
-  jednostkaMiary:string;
+  jednostkaMiary:number;
   ilosc:number;
   ceneNetto:number;
   wartoscVat:number;
